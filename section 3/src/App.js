@@ -11,18 +11,18 @@ function App() {
 
   function handleClick(selectedButton) {
     setselectedTopic(selectedButton);
-    console.log(setselectedTopic);
   }
 
   let tabContent = <p>Please select a topic.</p>;
 
-  if (selectedTopic) {
+  if (selectedTopic && EXAMPLES[selectedTopic.toLowerCase()]) {
+    const topic = EXAMPLES[selectedTopic.toLowerCase()];
     tabContent = (<div id = "tab-content">
-      <h3>{EXAMPLES[selectedTopic].title}</h3>
-      <p>{EXAMPLES[selectedTopic].description}</p>
+      <h3>{topic.title}</h3>
+      <p>{topic.description}</p>
       <pre>
         <code>
-          {EXAMPLES[selectedTopic].code}
+          {topic.code}
         </code>
       </pre>
     </div>
@@ -43,7 +43,7 @@ function App() {
           <h2>Examples</h2>
           <menu>
             <TabButton isSelected = {selectedTopic === 'Components'} onSelect = {() => handleClick('Components')}>Components</TabButton>
-            <TabButton isSelected = {selectedTopic === 'JSX'} onSelect = {() => handleClick('JSX')}>JSX</TabButton>
+            <TabButton isSelected = {selectedTopic === 'JSX'} onSelect = {() => handleClick('JSX') }>JSX</TabButton>
             <TabButton isSelected = {selectedTopic === 'Props'} onSelect = {() => handleClick('Props')}>Props</TabButton>
             <TabButton isSelected = {selectedTopic === 'State'} onSelect = {() => handleClick('State')}>State</TabButton>
           </menu>
@@ -55,4 +55,3 @@ function App() {
 }
 
 export default App;
-
