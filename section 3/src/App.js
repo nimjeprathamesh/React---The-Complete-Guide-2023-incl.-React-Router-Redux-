@@ -6,10 +6,10 @@ import TabButton from './components/TabButton.js';
 import { CORE_CONCEPTS, EXAMPLES } from './data.js';
 
 function App() {
-  const [selectedTopic, setselectedTopic]= useState();
+  const [selectedTopic, setSelectedTopic]= useState();
 
   function handleClick(selectedButton) {
-    setselectedTopic(selectedButton);
+    setSelectedTopic(selectedButton);
   }
 
   let tabContent = <p>Please select a topic.</p>;
