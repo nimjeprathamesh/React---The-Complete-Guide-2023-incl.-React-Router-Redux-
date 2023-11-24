@@ -3,8 +3,7 @@ import './App.css';
 import CoreConcept from './components/CoreConcepts.js';
 import Header from './components/Header/Header.js';
 import TabButton from './components/TabButton.js';
-import { CORE_CONCEPTS } from './data-with-examples.js';
-import { EXAMPLES } from './tab_content.js';
+import { CORE_CONCEPTS, EXAMPLES } from './data.js';
 
 function App() {
   const [selectedTopic, setselectedTopic]= useState();
