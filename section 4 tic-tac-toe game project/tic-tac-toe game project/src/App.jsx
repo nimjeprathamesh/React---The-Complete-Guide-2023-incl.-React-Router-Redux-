@@ -1,14 +1,14 @@
 import { useState } from "react";
 import './App.css';
-import GameBoard from './components/GameBoard';
-import GameOver from "./components/GameOver";
-import Log from "./components/Log";
-import Player from './components/Player';
-import { WINNING_COMBINATIONS } from "./winning_combinations";
+import GameOver from "./components/GameOver.jsx";
+import GameBoard from './components/Gameboard.jsx';
+import Log from "./components/Log.jsx";
+import Player from './components/Player.jsx';
+import { WINNING_COMBINATIONS } from "./winning_combinations.js";
 
 const PLAYERS = {
-  'X':'Player 1',
-  'O':'Player 2',
+  X:'Player 1',
+  O:'Player 2',
 };
 
 const INITIAL_GAME_BOARD = [
