@@ -9,6 +9,7 @@
 }
 
 .form-control input {
+  margin-bottom: 0.5rem;
   display: block;
   width: 100%;
   border: 1px solid #ccc;
@@ -21,4 +22,26 @@
   outline: none;
   background: #fad0ec;
   border-color: #8b005d;
+}
+
+.form-control.invalid input {
+  border-color: red;
+  color: red;
+  background-color: #ffd7d7;
+}
+
+.form-control.invalid p {
+  margin: 0;
+  color: red;
+}
+
+.form-control.invalid .icon-container {
+  display: flex;
+  align-items: center;
+  font-size: 12px;
+}
+
+.form-control.invalid .icon-container .icon {
+  margin-right: 8px;
+  color: red;
 }
