@@ -6,9 +6,37 @@ import SideBar from "./components/SideBar.jsx";
 
 function App() {
   const [projectState, setProjectState] = useState({
-    selectedProject: null,
-    projects: []
+    selectedProjectId: undefined,
+    projects: [],
+    tasks: []
   });
+
+  function handleAddTask(text) {
+    setProjectState(prevState => {
+      const taskId = Math.random();
+      const newTask = {
+        text:text,
+        projectId: prevState.selectedProjectId,
+        id: taskId,
+      }
+
+      return {
+        ...prevState,
+        tasks:[...prevState.tasks, newTask],
+      };
+    });
+  }
+
+  function handleDeleteTask(id) {
+    setProjectState(prevState => {
+      return {
+        ...prevState,
+        tasks: prevState.tasks.filter(
+          (task) => task.id !== id
+        ),
+      };
+    });
+  }
 
   function handleSelectedProject(id) {
     setProjectState(prevState => {
@@ -53,9 +81,29 @@ function App() {
     });
   }
 
-  const onSelectProject = projectState.projects.find(project => project.id === projectState.selectedProjectId)
+  function handleDeleteProject() {
+    setProjectState(prevState => {
+      return {
+        ...prevState,
+        selectedProjectId: undefined,
+        projects: prevState.projects.filter(
+          (project) => project.id !== prevState.selectedProjectId
+        ),
+      };
+    });
+  }
 
-  let content = <OnSelectProject project={onSelectProject} />;
+  const onSelectProject = projectState.projects.find((project) => project.id === projectState.selectedProjectId);
+
+  let content = (
+    <OnSelectProject
+      project={onSelectProject}
+      onPress={handleDeleteProject}
+      onAddTask={handleAddTask}
+      onDeleteTask={handleDeleteTask}
+      tasks={projectState.tasks}
+    />
+  );
 
   if(projectState.selectedProjectId === null) {
     content = <NewProject onInsert={handleAddNewProject} onCancel={handleCancelProject} />;
@@ -64,8 +112,13 @@ function App() {
   }
 
   return (
-    <main className="h-screen my-8 flex gap-8">
-      <SideBar onClickAddProject={handleAddProject} project={projectState.projects} onSelectedProject={handleSelectedProject} />
+    <main className="h-screen flex gap-8">
+      <SideBar
+        onClickAddProject={handleAddProject}
+        project={projectState.projects}
+        onSelectedProject={handleSelectedProject}
+        selectedProjectId={projectState.selectedProjectId}
+      />
       {content}
     </main>
   );

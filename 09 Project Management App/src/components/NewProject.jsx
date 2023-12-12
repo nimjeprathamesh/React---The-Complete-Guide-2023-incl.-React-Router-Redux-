@@ -1,4 +1,5 @@
 import { useRef } from "react";
+import Button from "./Button.jsx";
 import Input from "./Input.jsx";
 import Modal from "./Modal.jsx";
 
@@ -40,12 +41,7 @@ export default function NewProject({onInsert, onCancel}) {
                         </button>
                     </li>
                     <li>
-                        <button
-                            className="px-6 py-2 rounded-md bg-stone-800 text-stone-50 hover:bg-stone-950"
-                            onClick={handleSave}
-                        >
-                            Save
-                        </button>
+                        <Button children="Save" onClick={handleSave} />
                     </li>
                 </menu>
                 <div>
