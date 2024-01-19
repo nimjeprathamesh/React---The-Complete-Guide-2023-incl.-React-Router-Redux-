@@ -1,4 +1,4 @@
-import { useContext } from "react";
+import React, { useContext } from "react";
 import CartContext from "../store/CartContext.jsx";
 import { currencyFormatter } from "../util/formatting.jsx";
 import Button from "./UI/Button.jsx";
