@@ -1,0 +1,213 @@
+#bottom-header{
+	position: absolute;
+	overflow: visible;
+	background: transparent;
+	z-index: 1;
+}
+@media only screen and (max-width: 1023px) {
+	#bottom-header{
+		background-color: #000;
+		position: relative;
+		padding: 1% 0;
+	}
+}
+#bottom-header .navbar img{
+	margin-left: 5%;
+    position: relative;
+}
+@media only screen and (min-width: 425px) and (max-width: 767px) {
+	#bottom-header .navbar img{
+		margin-left: 10%;
+	}
+}
+@media only screen and (min-width: 375px) and (max-width: 424px) {
+	#bottom-header .navbar img{
+		margin-left: 15%;
+	}
+}
+@media only screen and (max-width: 374px) {
+	#bottom-header .navbar img{
+		margin-left: 20%;
+	}
+}
+#bottom-header ul {
+	list-style-type: none;
+	margin: 0;
+	padding: 0;
+}
+@media only screen and (min-width: 1024px) and (max-width: 1320px) {
+	#bottom-header ul {
+		margin-left: 16%;
+	}
+}
+@media only screen and (min-width: 375px) and (max-width: 1023px) {
+	#bottom-header ul {
+		display: block;
+	}
+}
+@media only screen and (min-width: 425px) and (max-width: 767px) {
+	#bottom-header ul {
+		margin: 15% 10% 0 10%;
+	}
+}
+@media only screen and (min-width: 375px) and (max-width: 424px) {
+	#bottom-header ul {
+		margin: 25% 10% 0 10%;
+	}
+}
+@media only screen and (max-width: 374px) {
+	#bottom-header ul {
+		margin: 15% 10% 0 10%;
+	}
+}
+#bottom-header li {
+	display: inline;
+	text-align: left;
+	margin-right: 6%;
+}
+@media only screen and (min-width: 768px) and (max-width: 1023px) {
+	#bottom-header li {
+		margin-left: 22%;
+	}
+}
+@media only screen and (max-width: 374px) {
+	#bottom-header li {
+		margin: 15% 0 0 0;
+	}
+}
+@media only screen and (min-width: 425px) and (max-width: 767px) {
+	#bottom-header li {
+		margin: 0 10% 0 10%;
+	}
+}
+#bottom-header li a{
+	color: #fff;
+	text-decoration: none;
+	font-size: 18px;
+	font-weight: 700;
+	text-align: left;
+	padding: 10px 15px;
+}
+#bottom-header li a:hover{
+	color: #f41844;
+	background-color: #ffa7b9;
+    border-radius: 5px;
+}
+@media only screen and (min-width: 1024px) and (max-width: 1320px) {
+	#bottom-header li a{
+		font-size: 15px;
+		padding: 8px 10px;
+	}
+}
+@media only screen and (min-width: 768px) and (max-width: 1023px) {
+	#bottom-header li a{
+		margin: 0 10% 0 10%;
+	}
+}
+@media only screen and (min-width: 1024px) and (max-width: 1320px) {
+	#bottom-header #home{
+		margin: 0;
+	}
+}
+#bottom-header .closebtn, .openNav{
+	display: none;
+}
+#bottom-header .closenavbar{
+	width: 0;
+}
+#bottom-header .activeBottomHeader {
+	color: #f41844;
+    border-bottom: 2px solid #f41844;
+    border-radius: 5px;
+}
+@media only screen and (max-width: 1023px) {
+	#bottom-header .sidenav {
+		height: 100%;
+		width: 0;
+		position: fixed;
+		z-index: 1;
+		top: 0;
+		left: 0;
+		background-color: #111;
+		overflow-x: hidden;
+		transition: 0.5s;
+		padding-top: 7%;
+	}
+	#bottom-header .sidenav a {
+		padding: 4% 4% 4% 10%;
+		text-decoration: none;
+		color: #818181;
+		display: block;
+		transition: 0.3s;
+	}
+	#bottom-header .sidenav a:hover {
+		color: #f1f1f1;
+	}
+	#bottom-header .sidenav .closebtn {
+		position: absolute;
+		top: 0;
+		right: 5%;
+		font-size: 36px;
+		display: block;
+		background: transparent;
+		border: none;
+		color: #818181;
+	}
+	#bottom-header .sidenav .closebtn:hover {
+		color: aliceblue;
+	}
+	#bottom-header .openNav{
+		display: block;
+		position: absolute;
+		right: 10px;
+		bottom: 2px;
+		color: #fff;
+		padding: 0 2%;
+		cursor: pointer;
+		font-weight: 900;
+		background-color: #272727;
+		box-shadow: 0 0px 3px 0 #fff, 0 0px 0px 0 rgba(0, 0, 0, 0.19);
+	}
+	#bottom-header .openNav:hover{
+		color: #f41844;
+		background-color: pink;
+	}
+}
+@media only screen and (min-width: 768px) and (max-width: 1023px) {
+	#bottom-header .openNav{
+		font-size: 30px;
+	}
+	#bottom-header .activenav{
+		width: 40%;
+	}
+}
+@media only screen and (min-width: 425px) and (max-width: 767px) {
+	#bottom-header .sidenav a {
+		padding: 4% 4% 4% 10%;
+	}
+	#bottom-header .openNav{
+		font-size: 25px;
+		bottom: 4px;
+	}
+	#bottom-header .activenav{
+		width: 60%;
+	}
+}
+@media only screen and (min-width: 375px) and (max-width: 424px) {
+	#bottom-header .openNav{
+		font-size: 24px;
+		bottom: 6px;
+	}
+	#bottom-header .activenav{
+		width: 70%;
+	}
+}
+@media only screen and (max-width: 374px) {
+	#bottom-header .openNav{
+		font-size: 24px;
+		bottom: 6px;
+	}
+	#bottom-header .activenav{
+		width: 80%;
+	}
+}

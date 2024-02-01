@@ -1,0 +1,75 @@
+#packageDetailsPage .inner-box-1 h6{
+	font-weight: 700;
+	position: relative;
+    left: -5%;
+}
+@media only screen and (max-width: 1023px) {
+	#packageDetailsPage .inner-box-1 h6{
+		position: unset;
+	}
+}
+#packageDetailsPage .inner-box-1 .hr-1{
+	width: 35%;
+	height: 3px;
+	background-color: #ff1944;
+	border: none;
+	opacity: 1;
+	margin: 0;
+}
+#packageDetailsPage .inner-box-1 .hr-2{
+	margin: 0.5% 0 3% 0;
+}
+@media only screen and (min-width: 1024px) and (max-width: 1320px) {
+	#packageDetailsPage .inner-box-1 .hr-2{
+		margin: 1% 0 3% 0;
+	}
+}
+#packageDetailsPage .inner-box-1 form{
+	border: 1px solid #c1babe;
+    padding: 0 5% 87% 5%;
+}
+@media only screen and (max-width: 1023px) {
+	#packageDetailsPage .inner-box-1 form{
+		padding: 0 2% 10% 2%;
+	}
+}
+@media only screen and (min-width: 1024px) and (max-width: 1320px) {
+	#packageDetailsPage .inner-box-1 form{
+		padding: 0 5% 61% 5%;
+	}
+}
+#packageDetailsPage .inner-box-1 input[type=text], input[type=email], textarea[type=text]{
+	padding: 5%;
+    width: 100%;
+    margin-top: 6%;
+	outline: none;
+    border: 1px solid #c1babe;
+}
+#packageDetailsPage .inner-box-1 input[type=text]::placeholder, input[type=email]::placeholder, textarea[type=text]::placeholder{
+	color: #000;
+}
+@media only screen and (max-width: 1023px) {
+	#packageDetailsPage .inner-box-1 input[type=text], input[type=email], textarea[type=text]{
+		margin-top: 2%;
+		padding: 2%;
+	}
+}
+#packageDetailsPage .inner-box-1 .submitButton{
+	padding: 4%;
+    width: 100%;
+    margin-top: 5%;
+    border: none;
+    border-radius: 8px;
+    font-weight: 500;
+    color: #fff;
+    background-color: #ff1944;
+}
+@media only screen and (max-width: 1023px) {
+	#packageDetailsPage .inner-box-1 .submitButton{
+		padding: 2%;
+	}
+}
+#packageDetailsPage .inner-box-1 .submitButton:hover{
+	color: #ff1944;
+	background-color: #000;
+}

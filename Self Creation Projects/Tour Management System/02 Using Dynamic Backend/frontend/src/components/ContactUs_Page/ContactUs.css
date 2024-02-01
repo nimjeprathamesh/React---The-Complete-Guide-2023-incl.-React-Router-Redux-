@@ -1,0 +1,36 @@
+#contact_page{
+	position: relative;
+	overflow: visible;
+	background-color: #fff;
+	padding: 0 3% 0 4%;
+}
+@media only screen and (min-width: 768px) and (max-width: 1023px) {
+	#contact_page {
+		margin-top: 10%;
+	}
+}
+@media only screen and (min-width: 425px) and (max-width: 767px) {
+	#contact_page {
+		padding: 0 7% 0 10%;
+		margin-top: 25%;
+	}
+}
+@media only screen and (min-width: 375px) and (max-width: 424px) {
+	#contact_page {
+		padding: 0 7% 0 10%;
+		margin-top: 28%;
+	}
+}
+@media only screen and (max-width: 374px) {
+	#contact_page {
+		padding: 0 7% 0 10%;
+		margin-top: 28%;
+	}
+}
+#contact_page .inner-area{
+    margin-bottom: 10px;
+    border-top-right-radius: 10px;
+    position: relative;
+    top: -4em;
+    background-color: #fff;
+}

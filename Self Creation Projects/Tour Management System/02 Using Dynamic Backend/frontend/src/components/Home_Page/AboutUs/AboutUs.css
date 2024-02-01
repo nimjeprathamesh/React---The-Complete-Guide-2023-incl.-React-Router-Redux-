@@ -1,0 +1,337 @@
+#homePageAboutUs{
+	position: relative;
+	overflow: hidden;
+	margin-top: 5%;
+}
+@media only screen and (min-width: 425px) and (max-width: 1023px) {
+	#homePageAboutUs{
+		margin-top: 15%;
+	}
+}
+@media only screen and (min-width: 375px) and (max-width: 424px) {
+	#homePageAboutUs{
+		margin-top: 0;
+	}
+}
+#homePageAboutUs .about-area{
+	background-color: #f5f5f5;
+}
+#homePageAboutUs .about-content{
+	padding-top: 8%;
+	-webkit-animation: bounceInRight 1s forwards;
+	animation: bounceInRight 1s both;
+    animation-delay: 0s;
+	visibility: visible;
+}
+@keyframes bounceInRight {
+	0% {
+	    opacity: 0;
+	    transform: translateX(200px);
+	}
+	
+	20% {
+	    transform: translateX(-20px);
+	}
+	
+	40% {
+	    transform: translateX(10px);
+	}
+	
+	60% {
+	    transform: translateX(-5px);
+	}
+	
+	80% {
+	    transform: translateX(2px);
+	}
+	
+	100% {
+	    opacity: 1;
+	    transform: translateX(0);
+	}
+}
+#homePageAboutUs .about-content h6{
+	color: #a0a0a0;
+	text-align: left;
+	padding-left: 20%;
+}
+@media only screen and (min-width: 768px) and (max-width: 1023px) {
+	#homePageAboutUs .about-content h6{
+		padding-left: 8%;
+	}
+}
+@media only screen and (min-width: 375px) and (max-width: 767px) {
+	#homePageAboutUs .about-content h6{
+		padding-left: 10%;
+	}
+}
+@media only screen and (max-width: 374px) {
+	#homePageAboutUs .about-content h6{
+		padding-left: 13%;
+	}
+}
+#homePageAboutUs .about-content h1{
+	font-weight: 700;
+	text-align: left;
+	padding: 2% 5% 0 20%;
+}
+@media only screen and (min-width: 768px) and (max-width: 1023px) {
+	#homePageAboutUs .about-content h1{
+		padding-left: 8%;
+	}
+}
+@media only screen and (min-width: 375px) and (max-width: 767px) {
+	#homePageAboutUs .about-content h1{
+		padding: 2% 6% 0 10%;
+		font-size: 30px;
+	}
+}
+@media only screen and (max-width: 374px) {
+	#homePageAboutUs .about-content h1{
+		padding: 2% 6% 0 13%;
+		font-size: 30px;
+		width: 88%;
+	}
+}
+#homePageAboutUs .about-content h5{
+	font-weight: 700;
+	color: #f41844;
+	padding: 3% 0 0 20%;
+	letter-spacing: 2.5px;
+}
+@media only screen and (min-width: 768px) and (max-width: 1023px) {
+	#homePageAboutUs .about-content h5{
+		padding-left: 8%;
+	}
+}
+@media only screen and (min-width: 375px) and (max-width: 767px) {
+	#homePageAboutUs .about-content h5{
+		padding: 3% 10%;
+	}
+}
+@media only screen and (max-width: 374px) {
+	#homePageAboutUs .about-content h5{
+		padding: 3% 13%;
+	}
+}
+#homePageAboutUs .about-image-overlay{
+	position: relative;
+}
+#homePageAboutUs .over_img {
+	width: 40%;
+    height: 15.2em;
+    display: block;
+    margin: 6% 0 10% 20%;
+    float: left;
+}
+@media only screen and (min-width: 768px) and (max-width: 1023px) {
+	#homePageAboutUs .over_img {
+		width: 88%;
+		margin: 8%;
+	}
+}
+@media only screen and (max-width: 767px) {
+	#homePageAboutUs .over_img {
+		width: 83%;
+		margin: 6% 0 13% 10%;
+	}
+}
+#homePageAboutUs .about-overlay {
+	position: absolute;
+    left: 20%;
+    top: 3em;
+    background-color: #f41844;
+    overflow: hidden;
+    width: 40%;
+    height: 15.2em;
+	-webkit-transform: scale(0);
+	-ms-transform: scale(0);
+	transform: scale(0);
+	-webkit-transition: .3s ease;
+	transition: .9s ease;
+	opacity: 0.4;
+}
+@media only screen and (min-width: 1024px) and (max-width: 1325px) {
+	#homePageAboutUs .about-overlay {
+		width: 40%;
+		height: 11.5em;
+		top: 2.4em;
+	}
+}
+@media only screen and (min-width: 768px) and (max-width: 1023px) {
+	#homePageAboutUs .about-overlay {
+		left: 8%;
+		width: 88%;
+		height: 32.4em;
+		top: 4em;
+	}
+}
+@media only screen and (min-width: 375px) and (max-width: 767px) {
+	#homePageAboutUs .about-overlay {
+		left: 10%;
+		top: 1.5em;
+		width: 83%;
+		height: 15.2em;
+	}
+}
+@media only screen and (max-width: 374px) {
+	#homePageAboutUs .about-overlay {
+		left: 10%;
+		top: 1.3em;
+		width: 83%;
+		height: 13em;
+	}
+}
+#homePageAboutUs .about-image-overlay:hover .about-overlay {
+	-webkit-transform: scale(1);
+	-ms-transform: scale(1);
+	transform: scale(1);
+}
+#homePageAboutUs .about-image{
+	position: absolute;
+    right: 21%;
+    top: 3em;
+}
+@media only screen and (min-width: 1024px) and (max-width: 1320px) {
+	#homePageAboutUs .about-image{
+		top: 2em;
+	}
+}
+@media only screen and (min-width: 768px) and (max-width: 1023px) {
+	#homePageAboutUs .about-image{
+		left: 11%;
+		top: 37em;
+		right: auto;
+	}
+}
+@media only screen and (min-width: 425px) and (max-width: 767px) {
+	#homePageAboutUs .about-image{
+		left: 15%;
+		top: 20em;
+		right: auto;
+	}
+}
+@media only screen and (min-width: 375px) and (max-width: 424px) {
+	#homePageAboutUs .about-image{
+		left: 15%;
+		top: 17.4em;
+		right: auto;
+	}
+}
+@media only screen and (max-width: 374px) {
+	#homePageAboutUs .about-image{
+		left: 15%;
+		top: 15.4em;
+		right: auto;
+	}
+}
+#homePageAboutUs .about-image-overlay:hover .about-image {
+	transform: rotate(45deg);
+}
+#homePageAboutUs .about-sub-area{
+	background-color: #212121;
+    width: 30%;
+    height: auto;
+    float: left;
+    position: relative;
+    left: 10%;
+    top: 9em;
+	padding: 2% 3% 3% 3%;
+}
+@media only screen and (min-width: 1024px) and (max-width: 1320px) {
+	#homePageAboutUs .about-sub-area{
+		width: 35%;
+		top: 7em;
+		left: 6%;
+		text-align: center;
+	}
+}
+@media only screen and (min-width: 768px) and (max-width: 1023px) {
+	#homePageAboutUs .about-sub-area{
+		width: 85%;
+		position: unset;
+		margin: 4% 0 5% 11%;
+	}
+}
+@media only screen and (min-width: 375px) and (max-width: 767px) {
+	#homePageAboutUs .about-sub-area{
+		width: 78%;
+		margin: 12% 0 8% 15%;
+		position: unset;
+		text-align: center;
+	}
+}
+@media only screen and (max-width: 374px) {
+	#homePageAboutUs .about-sub-area{
+		width: 70%;
+		margin: 20% 0 8% 15%;
+		position: unset;
+		text-align: center;
+	}
+}
+#homePageAboutUs .about-sub-area h4{
+	color: #fff;
+	text-align: left;
+	font-size: 15px;
+}
+@media only screen and (min-width: 1024px) and (max-width: 1320px) {
+	#homePageAboutUs .about-sub-area h4{
+		font-size: 14px;
+	}
+}
+#homePageAboutUs .about-sub-area span{
+	font-size: 30px;
+	color: #f41844;
+}
+@media only screen and (min-width: 1024px) and (max-width: 1320px) {
+	#homePageAboutUs .about-sub-area span{
+		font-size: 23px;
+	}
+}
+#homePageAboutUs .about-btn{
+	font-size: 22px;
+	font-weight: 800;
+	color: #f41844;
+	cursor: pointer;
+	transition: .9s ease;
+}
+@media only screen and (min-width: 1024px) and (max-width: 1320px) {
+	#homePageAboutUs .about-btn{
+		font-size: 11px;
+	}
+}
+@media only screen and (min-width: 768px) and (max-width: 1023px) {
+	#homePageAboutUs .about-btn{
+		text-align: center;
+	}
+}
+#homePageAboutUs .about-btn:hover{
+	transform: translateY(4px);
+}
+#homePageAboutUs .about-btn a{
+	text-decoration: none;
+	color: #f41844;
+}
+#homePageAboutUs .about-btn a:hover{
+	color: #fff;
+}
+#homePageAboutUs .about-btn span{
+	color: #7d7d7d;
+	display: inline;
+	cursor: pointer;
+	font-size: 15px;
+	font-weight: 700;
+}
+@media only screen and (max-width: 1321px) {
+	#homePageAboutUs .about-btn span{
+		font-size: 13px;
+	}
+}
+@media only screen and (min-width: 1024px) and (max-width: 1320px) {
+	#homePageAboutUs .about-btn span{
+		font-size: 14px;
+	}
+}
+#homePageAboutUs .about-btn span:hover{
+	color: #f41844;
+}

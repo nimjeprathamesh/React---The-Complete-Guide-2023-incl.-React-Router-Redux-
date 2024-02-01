@@ -1,0 +1,162 @@
+#homePageAboutUs .contact-area{
+	background-color: #212121;
+	float: right;
+	color: white;
+	width: 100%;
+	padding-bottom: 34%;
+	-webkit-animation: bounceInLeft 1s forwards;
+	animation: bounceInLeft 1s forwards;
+    animation-delay: 0s;
+	visibility: visible;
+}
+@keyframes bounceInLeft {
+	0% {
+	    opacity: 0;
+	    transform: translateX(-200px);
+	}
+	60% {
+	    opacity: 1;
+	    transform: translateX(30px);
+	}
+	80% {
+	    transform: translateX(-10px);
+	}
+	100% {
+	    transform: translateX(0);
+	}
+}
+@media only screen and (min-width: 1024px) and (max-width: 1320px) {
+	#homePageAboutUs .contact-area{
+		padding-bottom: 22%;
+	}
+}
+@media only screen and (min-width: 768px) and (max-width: 1023px) {
+	#homePageAboutUs .contact-area{
+		padding-bottom: 8%;
+	}
+}
+@media only screen and (min-width: 375px) and (max-width: 767px) {
+	#homePageAboutUs .contact-area{
+		padding-bottom: 20%;
+	}
+}
+@media only screen and (max-width: 374px) {
+	#homePageAboutUs .contact-area{
+		padding-bottom: 20%;
+	}
+}
+#homePageAboutUs .contact-area h1{
+	font-size: 40px;
+	text-align: left;
+	padding: 8% 0 5% 10%;
+	font-weight: normal;
+}
+#homePageAboutUs .contact-area form{
+	padding: 0 10%;
+}
+#homePageAboutUs span{
+	font-weight: 700;
+	display: inline;
+}
+#homePageAboutUs .field{
+	margin: 2% 0;
+	background-color: #2e2e2e !important;
+	outline: none;
+	color: #707d84;
+	border: none;
+	padding: 3%;
+	width: 100%;
+	border: none !important;
+	font-size: 13px;
+	font-family: Arial, Helvetica, sans-serif, FontAwesome;
+	box-shadow: 0 0px 5px 0 rgba(0, 0, 0, 0.2), 0 0px 18px 0 rgba(0, 0, 0, 0.19);
+}
+#homePageAboutUs .field:hover{
+	background-color: #fff !important;
+	color: #000;
+}
+@media only screen and (min-width: 1024px) and (max-width: 1320px) {
+	#homePageAboutUs .field{
+		margin: 4% 0;
+	}
+}
+#homePageAboutUs .field::placeholder,
+#homePageAboutUs textarea::placeholder {
+    color: #707d84;
+}
+#homePageAboutUs textarea[type=text] {
+	margin: 2% 0;
+	padding: 3%;
+	background-color: #2e2e2e !important;
+	color: #707d84;
+	border: none !important;
+	font-size: 13px;
+	font-family: Arial, Helvetica, sans-serif, FontAwesome;
+	width: 100%;
+	box-shadow: 0 0px 5px 0 rgba(0, 0, 0, 0.2), 0 0px 18px 0 rgba(0, 0, 0, 0.19);
+}
+#homePageAboutUs textarea[type=text]:hover{
+	background-color: #fff !important;
+	color: #000;
+}
+@media only screen and (min-width: 1024px) and (max-width: 1320px) {
+	#homePageAboutUs textarea[type=text] {
+		margin: 4% 0;
+	}
+}
+#homePageAboutUs .submitButton {
+	margin: 2% 0;
+	background-color: #f41844;
+	padding: 2% 4%;
+	border: none;
+	font-size: 15px;
+	font-weight: 600;
+	font-family: Arial, Helvetica, sans-serif, FontAwesome;
+	color:white;
+	cursor: pointer;
+	box-shadow: 0 0px 5px 0 rgba(0, 0, 0, 0.2), 0 0px 18px 0 rgba(0, 0, 0, 0.19);
+}
+#homePageAboutUs .submitButton:hover {
+	background-color: #fff;
+	color:#000;
+}
+#homePageAboutUs .submitButton:active {
+	transform: translateY(4px);
+}
+@media only screen and (min-width: 1199px) and (max-width: 1321px) {
+	#homePageAboutUs .submitButton{
+		margin: 0;
+	}
+}
+@media only screen and (min-width: 1024px) and (max-width: 1320px) {
+	#homePageAboutUs .submitButton{
+		margin: 4% 0;
+		width: 40%;
+	}
+}
+@media only screen and (min-width: 425px) and (max-width: 767px) {
+	#homePageAboutUs .submitButton{
+		width: 40%;
+	}
+}
+@media only screen and (min-width: 375px) and (max-width: 424px) {
+	#homePageAboutUs .submitButton{
+		width: 40%;
+		font-size: 13px;
+	}
+}
+@media only screen and (max-width: 374px) {
+	#homePageAboutUs .submitButton{
+		width: 40%;
+		font-size: 12px;
+	}
+}
+#homePageAboutUs .submitButton span {
+	padding-right: 10px;
+}
+#homePageAboutUs .successMsg {
+	font-family: 'slick';
+	color: green;
+	font-size: 13px;
+	font-weight: 900;
+}

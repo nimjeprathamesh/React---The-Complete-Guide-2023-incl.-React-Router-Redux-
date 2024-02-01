@@ -1,0 +1,60 @@
+#destinationDetailsPage .inner-box-1 form{
+	border: 1px solid #c1babe;
+    padding: 0 5% 5% 5%;
+	height: 41%;
+}
+@media only screen and (min-width: 1024px) and (max-width: 1320px) {
+	#destinationDetailsPage .inner-box-1 form{
+		height: 42%;
+	}
+}
+@media only screen and (max-width: 1023px) {
+	#destinationDetailsPage .inner-box-1 form{
+		padding: 0 2% 2% 2%;
+		height: 80%;
+	}
+}
+#destinationDetailsPage .inner-box-1 input[type=text], input[type=email], textarea[type=text]{
+	padding: 5%;
+    width: 100%;
+    margin-top: 6%;
+    border: 1px solid #c1babe;
+	box-shadow: none;
+	background-color: #fff;
+}
+#destinationDetailsPage .inner-box-1 input[type=text], input[type=email]{
+	background-color: #fff;
+    color: #000;
+}
+#destinationDetailsPage textarea[type=text]:hover{
+	background-color: #fff;
+    color: #000;
+}
+#destinationDetailsPage input[type=text]::placeholder, input[type=email]::placeholder, textarea[type=text]::placeholder{
+	color: #000;
+}
+@media only screen and (max-width: 1023px) {
+	#destinationDetailsPage .inner-box-1 input[type=text], input[type=email], textarea[type=text]{
+		margin-top: 2%;
+		padding: 2%;
+	}
+}
+#destinationDetailsPage .inner-box-1 .submitButton{
+	padding: 4%;
+    width: 100%;
+    margin-top: 5%;
+    border: none;
+    border-radius: 8px;
+    font-weight: 500;
+    color: #fff;
+    background-color: #ff1944;
+}
+@media only screen and (max-width: 1023px) {
+	#destinationDetailsPage .inner-box-1 .submitButton{
+		padding: 2%;
+	}
+}
+#destinationDetailsPage .inner-box-1 .submitButton:hover{
+	color: #ff1944;
+	background-color: #000;
+}

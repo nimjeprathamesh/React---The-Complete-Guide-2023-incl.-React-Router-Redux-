@@ -1,0 +1,49 @@
+#footer .lowerfooter{
+	text-align: center;
+	background-color: #1c1c1c;
+	padding: 4%;
+}
+#footer .lowerfooter-area{
+	color: #606060;
+	font-size: 15px;
+	position: relative;
+	-webkit-animation: bounceInUp 1s forwards;
+	animation: bounceInUp 1s both;
+	animation-delay: 0s;
+	visibility: visible;
+}
+@keyframes bounceInUp {
+	0% {
+	    opacity: 0;
+	    transform: translateY(200px);
+	}
+	
+	20% {
+	    transform: translateY(-20px);
+	}
+	
+	40% {
+	    transform: translateY(10px);
+	}
+	
+	60% {
+	    transform: translateY(-5px);
+	}
+	
+	80% {
+	    transform: translateY(2px);
+	}
+	
+	100% {
+	    opacity: 1;
+	    transform: translateY(0);
+	}
+}
+@media only screen and (min-width: 375px) and (max-width: 424px) {
+	#footer .lowerfooter-area{
+		font-size: 14px;
+	}
+}
+#footer .symbol{
+	color: white;
+}

@@ -1,0 +1,182 @@
+#top-header{
+	position: relative;
+	overflow: hidden;
+}
+#top-header .header-area{
+	font-size: 15px;
+}
+@media only screen and (min-width: 1024px) and (max-width: 1320px) {
+	#top-header .header-area{
+		font-size: 12px;
+	}
+}
+@media only screen and (max-width: 1023px) {
+	#top-header .header-area{
+		text-align: center;
+	}
+}
+#top-header .header-text {
+	margin-top: 4%;
+}
+@media only screen and (max-width: 1321px) {
+	#top-header .header-text {
+		margin: 5% 0 0 0;
+	}
+}
+#top-header .header-text span{
+	color:#f41844;
+}
+#top-header .header-mail{
+	cursor: pointer;
+	float: right;
+	padding: 2%;
+	text-decoration: none;
+	font-size: 20px;
+}
+@media only screen and (max-width: 1321px) {
+	#top-header .header-mail{
+		padding: 3%;
+	}
+}
+@media only screen and (min-width: 1024px) and (max-width: 1320px) {
+	#top-header .header-mail{
+		padding: 4%;
+		font-size: 15px;
+	}
+}
+@media only screen and (min-width: 375px) and (max-width: 1023px) {
+	#top-header .header-mail{
+		float: none;
+		padding-right: 2%;
+	}
+}
+@media only screen and (max-width: 374px) {
+	#top-header .header-mail{
+		float: none;
+	}
+}
+#top-header .header-mail a{
+	text-decoration: none;
+	color: #000;
+	font-size: 15px;
+}
+@media only screen and (min-width: 1024px) and (max-width: 1320px) {
+	#top-header .header-mail a{
+		font-size: 12px;
+	}
+}
+#top-header .header-mail a:hover{
+	color:#f41844;
+}
+#top-header .header-num{
+	cursor: pointer;
+	float: right;
+	padding: 4%;
+}
+@media only screen and (max-width: 1321px) {
+	#top-header .header-num{
+		padding: 5%;
+		float: unset;
+	}
+}
+@media only screen and (min-width: 1024px) and (max-width: 1320px) {
+	#top-header .header-num{
+		padding: 6%;
+	}
+}
+@media only screen and (min-width: 375px) and (max-width: 1023px) {
+	#top-header .header-num{
+		float: none;
+		padding: 1% 0 3% 0;
+	}
+}@media only screen and (max-width: 320px) {
+	#top-header .header-num{
+		float: unset;
+		padding: 1% 0 3% 0;
+		text-align: center;
+	}
+}
+#top-header .header-num span:hover{
+	color:#f41844;
+}
+#top-header .header-btn{
+	background-color:#f41844;
+	border:none;
+	float: right;
+	color: #fff;
+	padding: 5% 6%;
+	font-weight: bold;
+	margin-right: 15%;
+	box-shadow: 0 0px 5px 0 rgba(0, 0, 0, 0.2), 0 0px 18px 0 rgba(0, 0, 0, 0.19);
+}
+#top-header .header-btn:hover{
+	color:#f41844;
+    -webkit-animation: halftone 1s forwards;
+            animation: halftone 1s forwards;
+    background: radial-gradient(circle, #000 0.2em, transparent 0.25em) 0 0/1.25em 1.25em, 
+    radial-gradient(circle, #000 0.2em, transparent 0.25em) 6.25em 6.25em/1.25em 1.25em;
+}
+@-webkit-keyframes halftone {
+    100% {
+        background-size: 2.375em 2.375em, 0.1em 0.1em;
+    }
+}
+@keyframes halftone {
+    100% {
+        background-size: 2.375em 2.375em, 0.1em 0.1em;
+    }
+}
+#top-header .header-btn:active{
+	transform: translateY(1px);
+}
+@media only screen and (min-width: 1024px) and (max-width: 1320px) {
+	#top-header .header-btn{
+		padding: 6% 6%;	}
+}
+@media only screen and (min-width: 768px) and (max-width: 1023px) {
+	#top-header .header-btn{
+		float: none;
+		padding: 2% 0%;
+		width: 20%;
+		margin-right: auto;
+		position: relative;
+		left: 41%;
+		margin-bottom: 1%;
+	}
+}
+@media only screen and (min-width: 425px) and (max-width: 767px) {
+	#top-header .header-btn{
+		float: none;
+		padding: 2% 0%;
+		width: 25%;
+		margin-right: auto;
+		position: relative;
+		left: 38%;
+		margin-bottom: 1%;
+	}
+}
+@media only screen and (max-width: 424px) {
+	#top-header .header-btn{
+		float: none;
+		padding: 2% 0%;
+		width: 25%;
+		margin-right: auto;
+		position: relative;
+		left: 38%;
+		margin-bottom: 1%;
+	}
+}
+@media only screen and (min-width: 375px) and (max-width: 424px) {
+	#top-header .header-btn{
+		font-size: 12px;
+	}
+}
+@media only screen and (max-width: 374px) {
+	#top-header .header-btn{
+		font-size: 11px;
+	}
+}
+#top-header a{
+	color: #fff;
+	text-decoration: none;
+}

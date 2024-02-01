@@ -1,0 +1,129 @@
+#contact_page .contact-area{
+    background-color: #131313;
+	padding: 10% 12% 30% 10%;
+    margin-left: -12px;
+    border-radius: 0 0px 108px 0;
+	-webkit-animation: zoomIn 1s forwards;
+	animation: zoomIn 1s forwards;
+    animation-delay: 0s;
+	visibility: visible;
+}
+@keyframes zoomIn {
+	from {
+	    transform: scale(0);
+	}
+	
+	to {
+	    transform: scale(1);
+	}
+}
+@media only screen and (min-width: 425px) and (max-width: 767px) {
+	#contact_page .contact-area {
+		width: 107%;
+		border-radius: 0 10px 108px 0;
+	}
+}
+@media only screen and (min-width: 375px) and (max-width: 424px) {
+	#contact_page .contact-area {
+		width: 108%;
+		border-radius: 0 10px 108px 0;
+	}
+}
+@media only screen and (max-width: 374px) {
+	#contact_page .contact-area {
+		width: 110%;
+		border-radius: 0 10px 108px 0;
+	}
+}
+#contact_page .contact-area h1{
+	text-align: left;
+    font-weight: 800;
+    font-size: 50px;
+    color: #fff;
+    margin-bottom: 5%;
+	-webkit-animation: bounceInUp 1s forwards;
+	animation: bounceInLeft 1s both;
+    animation-delay: 0s;
+}
+@keyframes bounceInLeft {
+	0% {
+	    opacity: 0;
+	    transform: translateX(-100%);
+	}
+	
+	60% {
+	    opacity: 1;
+	    transform: translateX(25px);
+	}
+	
+	75% {
+	    transform: translateX(-10px);
+	}
+	
+	90% {
+	    transform: translateX(5px);
+	}
+	
+	100% {
+	    transform: translateX(0);
+	}
+}
+#contact_page form{
+	-webkit-animation: zoomIn 1s forwards;
+	animation: zoomIn 1s forwards;
+    animation-delay: 0s;
+	visibility: visible;
+}
+@keyframes zoomIn {
+	from {
+	    transform: scale(0);
+	}
+	
+	to {
+	    transform: scale(1);
+	}
+}
+#contact_page .input{
+	outline: none;
+    margin: 1%;
+    width: 100%;
+    padding: 2%;
+    background: transparent;
+	color: #fff;
+    border: none;
+    border-bottom: 1px solid #fff;
+    font-family: Arial, Helvetica, sans-serif, FontAwesome;
+}
+#contact_page .input::placeholder, .textarea::placeholder{
+    color: #fff;
+}
+#contact_page .textarea{
+    width: 100%;
+    margin: 1%;
+    padding: 2%;
+    background: transparent;
+	color: #fff;
+    border: none;
+    border-bottom: 1px solid #fff;
+    font-family: Arial, Helvetica, sans-serif, FontAwesome;
+}
+#contact_page .textarea::placeholder{
+	color: #fff;
+}
+#contact_page .submitButton{
+    float: right;
+    border: none;
+    border-radius: 6px;
+    margin-top: 3%;
+    padding: 1% 2%;
+    color: #fff;
+    background-color: #f41844;
+    font-family: Arial, Helvetica, sans-serif, FontAwesome;
+}
+#contact_page .submitButton:hover{
+    color: #f41844;
+    background-color: #fff;
+}
+#contact_page .submitButton:active{
+	transform: translateY(4px);
+}
