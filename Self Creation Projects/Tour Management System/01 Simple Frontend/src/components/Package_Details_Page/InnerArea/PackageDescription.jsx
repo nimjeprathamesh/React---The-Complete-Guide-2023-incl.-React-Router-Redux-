@@ -20,7 +20,7 @@ export default function PackageDescription() {
                 <span><i className="fa-solid fa-dollar-sign"></i>{selectedPackage.price}</span>
             </div>
             <hr></hr>
-            <img src={selectedPackage.packagesImage} alt='Package Details' />
+            <img src={selectedPackage.image} alt='Package Details' />
             <div className="row">
                 <div className="caption">
                     <i className="fa-solid fa-location-dot"></i> {selectedPackage.location}

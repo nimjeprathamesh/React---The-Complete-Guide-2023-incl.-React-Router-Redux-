@@ -11,7 +11,7 @@ export default function DestinationDetailsHeader() {
     }
 
     const backgroundImageStyle = {
-        backgroundImage: `url(${selectedDestination.destinationImage})`,
+        backgroundImage: `url(${selectedDestination.image})`,
     };
 
     return (

@@ -21,7 +21,7 @@ export default function DestinationDescription() {
             <div className="col-xxl-9 col-xl-9 col-lg-9 col-md-12 col-sm-12 col-xs-12 col-12">
                 <h5><i className="fa-regular fa-calendar" id="icon"></i> {selectedDestination.date}</h5>
                 <hr></hr>
-                <img src={selectedDestination.destinationImage} alt='Destination Details' />
+                <img src={selectedDestination.image} alt='Destination Details' />
                 <i>&#xf017;</i> {selectedDestination.duration}
                 {detailsParagraphs.map((paragraph, index) => (
                     <p key={index}>
