@@ -1,0 +1,159 @@
+#homePageBanner{
+	position: relative;
+	overflow: hidden;
+	-webkit-animation: bounceIn 1s both;
+	animation: bounceIn 1s both;
+    animation-delay: 0s;
+	visibility: visible;
+}
+@keyframes bounceIn {
+	0% {
+	    opacity: 0;
+	    transform: scale(0.3);
+	}
+	
+	20% {
+	    transform: scale(1.1);
+	}
+	
+	40% {
+	    transform: scale(0.9);
+	}
+	
+	60% {
+	    opacity: 1;
+	    transform: scale(1.03);
+	}
+	
+	80% {
+	    transform: scale(0.97);
+	}
+	
+	100% {
+	    opacity: 1;
+	    transform: scale(1);
+	}
+}
+#homePageBanner .container {
+	position: relative;
+	text-align: center;
+	color: white;
+}
+#homePageBanner .ban-area img{
+	width: 100%;
+	margin-top: 10%;
+}
+@media only screen and (min-width: 1199px) and (max-width: 1321px) {
+	#homePageBanner .ban-area img {
+		width: 110%;
+	}
+}
+@media only screen and (min-width: 768px) and (max-width: 1320px) {
+	#homePageBanner .ban-area img {
+		width: 150%;
+	}
+}
+@media only screen and (min-width: 425px) and (max-width: 767px) {
+	#homePageBanner .ban-area img{
+		width: 240%;
+	}
+}
+@media only screen and (min-width: 375px) and (max-width: 424px) {
+	#homePageBanner .ban-area img{
+		width: 235%;
+	}
+}
+@media only screen and (max-width: 374px) {
+	#homePageBanner .ban-area img{
+		width: 380%;
+	}
+}
+#homePageBanner .ban-area h1 {
+	position: absolute;
+	top: 45%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	color: black;
+	width: 100%;
+	font-size: 50px;
+	padding: 15%;
+	font-weight: 100;
+}
+@media only screen and (min-width: 1024px) and (max-width: 1320px) {
+	#homePageBanner .ban-area h1 {
+		padding: 11%;
+	}
+}
+@media only screen and (min-width: 768px) and (max-width: 1023px) {
+	#homePageBanner .ban-area h1 {
+		font-size: 35px;
+		padding: 10%;
+		width: 100%;
+	}
+}
+@media only screen and (min-width: 425px) and (max-width: 767px) {
+	#homePageBanner .ban-area h1 {
+		width: 80%;
+		padding: 0;
+		font-size: 27px;
+	}
+}
+@media only screen and (min-width: 375px) and (max-width: 424px) {
+	#homePageBanner .ban-area h1 {
+		font-size: 28px;
+		width: 123%;
+	}
+}
+@media only screen and (max-width: 374px) {
+	#homePageBanner .ban-area h1 {
+		font-size: 23px;
+    	width: 102%;
+	}
+}
+#homePageBanner .ban-area h1 span {
+	font-weight: 800;
+	font-family: Arial Black;
+}
+#homePageBanner .banner-btn {
+	position: absolute;
+	top: 65%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	color: #f41844;
+	display: inline;
+	cursor: pointer;
+	transition: .9s ease;
+	font-weight: 900;
+}
+@media only screen and (min-width: 768px) and (max-width: 1023px) {
+	#homePageBanner .banner-btn {
+		top: 70%;
+	}
+}
+@media only screen and (min-width: 375px) and (max-width: 424px) {
+	#homePageBanner .banner-btn {
+		left: 47%;
+	}
+}
+@media only screen and (max-width: 374px) {
+	#homePageBanner .banner-btn {
+		width: 100%;
+	}
+}
+#homePageBanner .banner-btn:hover{
+	font-size:20px;
+}
+#homePageBanner .banner-btn a{
+	text-decoration: none;
+	color: #f41844;
+}
+#homePageBanner .banner-btn a:hover{
+	color: black;
+}
+#homePageBanner .banner-btn span {
+	color: black;
+	font-weight: 600;
+}
+#homePageBanner .banner-btn span:hover{
+	color: #f41844;
+}

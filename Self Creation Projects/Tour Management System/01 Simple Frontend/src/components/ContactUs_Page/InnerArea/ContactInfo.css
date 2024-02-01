@@ -1,0 +1,157 @@
+#contact_page .contact-info{
+    background-image: radial-gradient( circle farthest-corner at 10% 20%,#ff1944 0%,#ee4867 100.3% );
+	padding: 8% 4% 25% 10%;
+    border-radius: 30px 0 0 0;
+	margin: 43% -2% 0px 5%;
+	-webkit-animation: zoomIn 1s forwards;
+	animation: zoomIn 1s forwards;
+    animation-delay: 0s;
+	visibility: visible;
+}
+@keyframes zoomIn {
+	from {
+	    transform: scale(0);
+	}
+	
+	to {
+	    transform: scale(1);
+	}
+}
+@media only screen and (max-width: 767px) {
+	#contact_page .contact-info{
+		margin: 5% -2% 0px 5%;
+	}
+}
+@media only screen and (max-width: 374px) {
+	#contact_page .contact-info{
+		padding: 8% 4% 50% 10%;
+	}
+}
+#contact_page .contact-details{
+	-webkit-animation: bounceInRight 1s forwards;
+	animation: bounceInRight 1s both;
+	animation-delay: 0s;
+	visibility: visible;
+}
+@keyframes bounceInRight {
+	0% {
+	    opacity: 0;
+	    transform: translateX(200px);
+	}
+	
+	20% {
+	    transform: translateX(-20px);
+	}
+	
+	40% {
+	    transform: translateX(10px);
+	}
+	
+	60% {
+	    transform: translateX(-5px);
+	}
+	
+	80% {
+	    transform: translateX(2px);
+	}
+	
+	100% {
+	    opacity: 1;
+	    transform: translateX(0);
+	}
+}
+#contact_page .contact-label{
+    color: #fff;
+    font-size: 15px;
+    margin-top: 7%;
+}
+#contact_page .contact-label i{
+    color: #fff;
+    font-size: 25px;
+	margin: 1% 8% 0 0;
+    float: left;
+}
+#contact_page .contact-label span{
+	display: flex;
+    flex-direction: column;
+}
+#contact_page .contact-label a{
+    color: #fff;
+    font-size: 15px;
+    text-decoration: none;
+    transition: .9s ease;
+}
+#contact_page .contact-label a:hover{
+    color: #000;
+}
+#contact_page .contact-label .num{
+	cursor: pointer;
+}
+#contact_page .contact-account{
+    color: #fff;
+    font-size: 15px;
+    margin-top: 10%;
+	-webkit-animation: pulse 1s 1;
+	animation: pulse 1s 1;
+	animation-delay: 0s;
+	visibility: visible;
+}
+@keyframes pulse {
+	0% {
+	    transform: scale(1);
+	}
+	
+	50% {
+	    transform: scale(1.1);
+	}
+	
+	100% {
+	    transform: scale(1);
+	}
+}
+#contact_page .contact-account i{
+    color: #fff;
+    font-size: 25px;
+    border-radius: 40px;
+    float: left;
+    box-shadow: 0px 6px 10px -4px rgba(0,0,0,0.4);
+}
+#contact_page .contact-account i:hover{
+    color: #f41844;
+    background-color: #fff;
+}
+#contact_page #face{
+    padding: 15px 20px;
+}
+#contact_page #twit{
+    padding: 16px 17px;
+}
+#contact_page #insta{
+    padding: 15px 17px;
+}
+#contact_page #link{
+    padding: 15px 17px;
+}
+#contact_page .gmap{
+    cursor: url(https://maps.gstatic.com/mapfiles/openhand_8_8.cur), default;
+    touch-action: pan-x pan-y;
+	-webkit-animation: zoomIn 1s forwards;
+	animation: zoomIn 1s forwards;
+    animation-delay: 0s;
+	visibility: visible;
+}
+@keyframes zoomIn {
+	from {
+	    transform: scale(0);
+	}
+	
+	to {
+	    transform: scale(1);
+	}
+}
+#contact_page iframe{
+    width: 97%;
+    height: 300px;
+	margin-left: 5%;
+    border-radius: 0 0 30px 0;
+}

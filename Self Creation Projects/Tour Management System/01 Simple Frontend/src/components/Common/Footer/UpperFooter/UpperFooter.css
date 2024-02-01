@@ -1,0 +1,120 @@
+#footer{
+	position: absolute;
+	overflow: hidden;
+}
+#footer .upperfooter{
+	background-color: #2a2a2a;
+	padding: 3%;
+}
+#footer .phone{
+	color: #606060;
+	font-size: 15px;
+	margin-top: 6%;
+	text-align: center;
+	font-weight: 500;
+	-webkit-animation: fadeInRight 1s forwards;
+	animation: fadeInRight 1s both;
+	animation-delay: 0s;
+	visibility: visible;
+}
+@keyframes fadeInRight {
+	0% {
+	    opacity: 0;
+	    transform: translateX(100%);
+	}
+	
+	100% {
+	    opacity: 1;
+	    transform: translateX(0);
+	}
+}
+#footer #call{
+	color: white;
+	margin-right: 3%;
+}
+#footer .mail{
+	font-size: 15px;
+	cursor: pointer;
+	margin-top: 6%;
+	text-align: center;
+	font-weight: 500;
+	-webkit-animation: fadeInRight 1s forwards;
+	animation: fadeInRight 1s both;
+	animation-delay: 0s;
+	visibility: visible;
+}
+@keyframes fadeInRight {
+	0% {
+	    opacity: 0;
+	    transform: translateX(100%);
+	}
+	
+	100% {
+	    opacity: 1;
+	    transform: translateX(0);
+	}
+}
+@media only screen and (min-width: 1024px) and (max-width: 1320px) {
+	#footer .mail{
+		text-align: left;
+	}
+}
+@media only screen and (min-width: 768px) and (max-width: 1023px) {
+	#footer .mail{
+		margin-top: 6%;
+	}
+}
+#footer .mail a{
+	color: #606060;
+	text-decoration: none;
+}
+#footer .mail a:hover{
+	color: #f41844;
+}
+#footer #email{
+	margin-right: 3%;
+	color: white;
+}
+#footer .connect{
+	font-size: 40px;
+	float: right;
+	color: #747474;
+	-webkit-animation: fadeInRight 1s forwards;
+	animation: fadeInRight 1s both;
+	animation-delay: 0s;
+	visibility: visible;
+}
+@keyframes fadeInRight {
+	0% {
+	    opacity: 0;
+	    transform: translateX(100%);
+	}
+	
+	100% {
+	    opacity: 1;
+	    transform: translateX(0);
+	}
+}
+@media only screen and (min-width: 375px) and (max-width: 1023px) {
+	#footer .connect{
+		float: none;
+		margin-top: 2%;
+		text-align: center;
+	}
+}
+#footer .connect a{
+	text-decoration: none;
+	color: #747474;
+}
+#footer #upperfooter-icon{
+	margin-right: 20px;
+	cursor: pointer;
+	transition-duration: 1s;
+	transition: transform .9s;
+}
+#footer #upperfooter-icon:hover{
+	color: #f41844;
+	-ms-transform: scale(1.3); /* IE 9 */
+	-webkit-transform: scale(1.3); /* Safari 3-8 */
+	transform: scale(1.3);
+}

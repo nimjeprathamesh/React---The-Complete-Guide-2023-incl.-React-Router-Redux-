@@ -1,0 +1,173 @@
+#homePageMember{
+	position: relative;
+	overflow: hidden;
+	-webkit-animation: bounceInRight 1s forwards;
+	animation: bounceInRight 1s both;
+    animation-delay: 0s;
+	visibility: visible;
+}
+@keyframes bounceInRight {
+	0% {
+	    opacity: 0;
+	    transform: translateX(200px);
+	}
+	
+	20% {
+	    transform: translateX(-20px);
+	}
+	
+	40% {
+	    transform: translateX(10px);
+	}
+	
+	60% {
+	    transform: translateX(-5px);
+	}
+	
+	80% {
+	    transform: translateX(2px);
+	}
+	
+	100% {
+	    opacity: 1;
+	    transform: translateX(0);
+	}
+}
+#homePageMember h1{
+	margin: 7% 0 3% 0;
+	text-align: center;
+	font-size: 50px;
+	font-weight: 100;
+}
+@media only screen and (min-width: 1024px) and (max-width: 1320px) {
+	#homePageMember h1{
+		font-size: 45px;
+	}
+}
+@media only screen and (min-width: 768px) and (max-width: 1023px) {
+	#homePageMember h1{
+		font-size: 40px;
+	}
+}
+@media only screen and (min-width: 425px) and (max-width: 767px) {
+	#homePageMember h1{
+		font-size: 35px;
+	}
+}
+@media only screen and (min-width: 375px) and (max-width: 424px) {
+	#homePageMember h1{
+		font-size: 30px;
+	}
+}
+@media only screen and (max-width: 374px) {
+	#homePageMember h1{
+		font-size: 30px;
+	}
+}
+#homePageMember h1 b{
+	font-weight: 700;
+	display: inline;
+	text-align: center;
+}
+#homePageMember .member-area{
+	padding: 0 4%;
+}
+@media only screen and (min-width: 768px) and (max-width: 1023px) {
+	#homePageMember .member-area{
+		padding: 0 4% 0 7%;
+	}
+}
+@media only screen and (min-width: 425px) and (max-width: 767px) {
+	#homePageMember .member-area{
+		padding: 0 8%;
+	}
+}
+@media only screen and (max-width: 374px) {
+	#homePageMember .member-area{
+		padding: 0 2% 0 6%;
+	}
+}
+#homePageMember .member-box{
+	margin: 10% 0 25% 0;
+	padding-bottom: 5%;
+	cursor: pointer;
+	box-shadow: 0 0px 5px 0 rgba(0, 0, 0, 0.2), 0 0px 18px 0 rgba(0, 0, 0, 0.19);
+	border: none;
+	width: 100%;
+	height: auto;
+}
+@media only screen and (min-width: 425px) and (max-width: 1023px) {
+	#homePageMember .member-box{
+		margin-bottom: 1%;
+	}
+}
+@media only screen and (min-width: 375px) and (max-width: 424px) {
+	#homePageMember .member-box{
+		margin: 10% 0 25% 1.8%;
+	}
+}
+#homePageMember .member-image-overlay{
+	position: relative;
+}
+#homePageMember .member-image-overlay img{
+	height: 65vh;
+	width: 100%;
+	margin-bottom: 3%;
+	display: block;
+}
+#homePageMember .member-overlay {
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	background-color: #f41844;
+	overflow: hidden;
+	width: 100%;
+	height: 0;
+	transition: .9s ease;
+	opacity: 0.4;
+}
+#homePageMember .member-box:hover .member-overlay {
+	height: 100%;
+}
+#homePageMember .caption-1{
+	font-size: 18px;
+	font-weight: 700;
+	margin-left: 4%;
+}
+#homePageMember .member-box:hover .caption-1{
+	color: #f41844;
+}
+#homePageMember #placeprice{
+	color: #f41844;
+	font-weight: none;
+	float: left;
+	margin: 0 3% 0 4%;
+}
+#homePageMember .caption-2{
+	color: #000;
+	font-size: 15px;
+	float: left;
+	margin-right: 40%;
+	font-weight: 100;
+}
+@media only screen and (min-width: 1024px) and (max-width: 1320px) {
+	#homePageMember .caption-2{
+		margin-right: 30%;
+	}
+}
+@media only screen and (max-width: 374px) {
+	#homePageMember .caption-2{
+		margin-right: 33%;
+	}
+}
+#homePageMember .price{
+	color: #000;
+	font-size: 15px;
+	margin-top: 3%;
+	font-weight: 100;
+}
+#homePageMember .price span{
+	color: #000;
+	font-weight: 500;
+}

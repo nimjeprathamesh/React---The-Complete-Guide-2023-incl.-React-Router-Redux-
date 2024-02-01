@@ -1,0 +1,92 @@
+#homePageNewsletter .subscribe{
+	text-align: center;
+	padding-bottom: 8%;
+}
+#homePageNewsletter input[type=email] {
+	outline: none;
+	width: 100%;
+    border: none;
+	margin: 6% 10% 2% 10%;
+    font-size: 20px;
+    padding: 3%;
+    color: #000;
+    box-shadow: 0 0px 5px 0 rgba(0, 0, 0, 0.2), 0 0px 18px 0 rgba(0, 0, 0, 0.19);
+}
+#homePageNewsletter input[type=email]::placeholder{
+	color: rgb(97, 97, 97);
+}
+#homePageNewsletter input[type=email]:hover{
+	background-color: #000;
+	color: #fff;
+}
+@media only screen and (min-width: 768px) and (max-width: 1023px) {
+	#homePageNewsletter input[type=email] {
+		margin: 6% 1% 2% 0;
+		font-size: 20px;
+		padding: 2%;
+	}
+}
+@media only screen and (min-width: 375px) and (max-width: 767px) {
+	#homePageNewsletter input[type=email] {
+		width: 80%;
+		margin: 6% 7%;
+	}
+}
+@media only screen and (max-width: 374px) {
+	#homePageNewsletter input[type=email] {
+		width: 80%;
+		margin: 6% 7%;
+	}
+}
+#homePageNewsletter .subscribeButton {
+	background-color:#f41844;
+	border: none;
+	color: white;
+	width: 60%;
+	font-size: 25px;
+	margin: 11.5% 0;
+    padding: 5%;
+	font-weight: 600;
+	box-shadow: 0 0px 5px 0 rgba(0, 0, 0, 0.2), 0 0px 18px 0 rgba(0, 0, 0, 0.19);
+	cursor: pointer;
+}
+#homePageNewsletter .subscribeButton:hover {
+	background-color: #000;
+	color:#f41844;
+}
+#homePageNewsletter .subscribeButton:active {
+	transform: translateY(4px);
+}
+@media only screen and (min-width: 768px) and (max-width: 1023px) {
+	#homePageNewsletter .subscribeButton {
+		width: auto;
+		font-size: 15px;
+		padding: 3% 4%;
+		float: left;
+		margin: 0 1%;
+	}
+}
+@media only screen and (min-width: 375px) and (max-width: 767px) {
+	#homePageNewsletter .subscribeButton {
+		width: 50%;
+		margin: 0;
+		font-size: 20px;
+		padding: 3%;
+	}
+}
+@media only screen and (max-width: 374px) {
+	#homePageNewsletter .subscribeButton {
+		width: 50%;
+		margin: 0;
+		font-size: 20px;
+		padding: 3%;
+	}
+}
+#homePageNewsletter .successMsg {
+	font-family: 'slick';
+    color: green;
+    font-size: 16px;
+    font-weight: 900;
+    text-align: left;
+    margin-left: 10%;
+}
