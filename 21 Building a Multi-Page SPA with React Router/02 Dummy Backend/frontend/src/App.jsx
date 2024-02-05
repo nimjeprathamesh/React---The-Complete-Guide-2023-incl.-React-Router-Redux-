@@ -1,5 +1,4 @@
 import { RouterProvider, createBrowserRouter } from 'react-router-dom';
-
 import { action as manipulateEventAction } from './components/EventForm';
 import EditEventPage from './pages/EditEvent';
 import ErrorPage from './pages/Error';
