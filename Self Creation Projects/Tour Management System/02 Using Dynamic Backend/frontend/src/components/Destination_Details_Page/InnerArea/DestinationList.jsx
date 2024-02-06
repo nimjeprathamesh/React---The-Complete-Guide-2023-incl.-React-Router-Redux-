@@ -1,6 +1,6 @@
 import useHttp from '../../../hooks/useHttp.jsx';
 import { useDestinationContext } from '../../../store/DestinationContext.jsx';
-import Error from '../../UI/Error.jsx';
+import Error from '../../UI/Error/Error.jsx';
 import Lists from '../../UI/Lists.jsx';
 import './DestinationList.css';
 

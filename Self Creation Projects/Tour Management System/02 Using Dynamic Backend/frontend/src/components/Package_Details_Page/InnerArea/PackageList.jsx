@@ -1,6 +1,6 @@
 import useHttp from '../../../hooks/useHttp.jsx';
 import { usePackageContext } from '../../../store/PackagesContext.jsx';
-import Error from '../../UI/Error.jsx';
+import Error from '../../UI/Error/Error.jsx';
 import Lists from '../../UI/Lists.jsx';
 import './PackageList.css';
 

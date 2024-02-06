@@ -1,7 +1,7 @@
 import React from 'react';
 import { useParams } from 'react-router-dom';
 import useHttp from '../../../hooks/useHttp.jsx';
-import Error from '../../UI/Error.jsx';
+import Error from '../../UI/Error/Error.jsx';
 import './DestinationDescription.css';
 
 const requestConfig = {};

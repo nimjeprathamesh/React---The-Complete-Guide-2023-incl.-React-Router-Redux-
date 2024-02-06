@@ -4,7 +4,7 @@ import Slider from 'react-slick';
 import 'slick-carousel/slick/slick-theme.css';
 import 'slick-carousel/slick/slick.css';
 import useHttp from '../../../hooks/useHttp.jsx';
-import Error from '../../UI/Error.jsx';
+import Error from '../../UI/Error/Error.jsx';
 import "./Testimonial.css";
 import TestimonialContent from './TestimonialContent.jsx';
 

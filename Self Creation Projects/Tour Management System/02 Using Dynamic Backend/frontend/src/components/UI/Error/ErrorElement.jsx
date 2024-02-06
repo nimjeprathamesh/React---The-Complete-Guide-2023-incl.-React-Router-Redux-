@@ -1,5 +1,5 @@
-import Footer from "../Common/Footer/Footer";
-import Header from "../Common/Header/Header";
+import Footer from "../../Common/Footer/Footer.jsx";
+import Header from "../../Common/Header/Header.jsx";
 
 export default function ErrorElement() {
     return (

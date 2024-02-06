@@ -7,7 +7,7 @@ import Destination from './Destination_Page/Destination.jsx';
 import Home from './Home_Page/Home.jsx';
 import PackageDetails from './Package_Details_Page/PackageDetails.jsx';
 import TourPackage from './Tour_Packages_Page/TourPackage.jsx';
-import ErrorElement from './UI/ErrorElement.jsx';
+import ErrorElement from './UI/Error/ErrorElement.jsx';
 
 const router = createBrowserRouter([
     {

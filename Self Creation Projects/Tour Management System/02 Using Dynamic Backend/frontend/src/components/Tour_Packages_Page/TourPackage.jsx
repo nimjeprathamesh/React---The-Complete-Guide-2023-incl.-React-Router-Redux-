@@ -1,5 +1,5 @@
 import useHttp from '../../hooks/useHttp.jsx';
-import Error from '../UI/Error.jsx';
+import Error from '../UI/Error/Error.jsx';
 import './TourPackage.css';
 import TourPackageContent from './TourPackageContent.jsx';
 import TourPackageHeader from './TourPackageHeader/TourPackageHeader';

@@ -1,6 +1,6 @@
 import React from 'react';
 import useHttp from '../../hooks/useHttp.jsx';
-import Error from '../UI/Error.jsx';
+import Error from '../UI/Error/Error.jsx';
 import './Destination.css';
 import DestinationContent from './DestinationContent.jsx';
 import DestinationHeader from './DestinationHeader/DestinationHeader.jsx';

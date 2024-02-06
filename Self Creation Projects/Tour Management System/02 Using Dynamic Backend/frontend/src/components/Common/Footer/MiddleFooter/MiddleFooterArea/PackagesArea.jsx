@@ -1,6 +1,6 @@
 
 import useHttp from '../../../../../hooks/useHttp.jsx';
-import Error from '../../../../UI/Error.jsx';
+import Error from '../../../../UI/Error/Error.jsx';
 import Lists from '../../../../UI/Lists.jsx';
 import '../MiddleFooter.css';
 

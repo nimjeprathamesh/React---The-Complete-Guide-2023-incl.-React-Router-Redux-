@@ -3,7 +3,7 @@ import useHttp from '../../../hooks/useHttp.jsx';
 import useInput from '../../../hooks/useInput.jsx';
 import DataContext from '../../../store/dataContext.jsx';
 import Button from '../../UI/Button';
-import Error from '../../UI/Error.jsx';
+import Error from '../../UI/Error/Error.jsx';
 import Input from '../../UI/Input';
 import './ContactUs.css';
 
