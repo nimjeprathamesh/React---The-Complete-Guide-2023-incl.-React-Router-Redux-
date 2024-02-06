@@ -12,14 +12,8 @@ export default function Destination() {
                 <h1><span>Top</span> Destinations</h1>
             </div>
             <div className="row service-1-area">
-                {limitedDestinations.map((destination, index) => (
-                    <DestinationContent
-                        key={index}
-                        id={destination.id}
-                        imgSrc={destination.image}
-                        name={destination.name}
-                        duration={destination.duration}
-                    />
+                {limitedDestinations.map((destination) => (
+                    <DestinationContent key={destination.id} destination={destination} />
                 ))}
             </div>
             <div className="row">

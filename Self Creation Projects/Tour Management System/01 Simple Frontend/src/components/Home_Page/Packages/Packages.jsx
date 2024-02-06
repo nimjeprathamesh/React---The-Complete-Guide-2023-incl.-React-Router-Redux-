@@ -14,16 +14,7 @@ export default function Packages() {
 			<div className="service-2-area">
 				<div className="row">
                     {limitedPackages.map((packages) => (
-                        <PackagesContent
-                            key={packages.title}
-                            id={packages.id}
-                            imgSrc={packages.image}
-                            title={packages.title}
-                            location={packages.location}
-                            details={packages.details}
-                            duration={packages.duration}
-                            price={packages.price}
-                        />
+                        <PackagesContent key={packages.title} packages={packages} />
                     ))}
 				</div>
 				<div className="row">

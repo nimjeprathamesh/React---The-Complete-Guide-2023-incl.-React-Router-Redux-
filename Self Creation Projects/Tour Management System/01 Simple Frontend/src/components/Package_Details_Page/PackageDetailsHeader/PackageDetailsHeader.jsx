@@ -11,7 +11,7 @@ export default function PackageDetailsHeader() {
     }
 
     const backgroundImageStyle = {
-        backgroundImage: `url(${selectedPackage.packagesImage})`,
+        backgroundImage: `url(${selectedPackage.image})`,
     };
 
     return (

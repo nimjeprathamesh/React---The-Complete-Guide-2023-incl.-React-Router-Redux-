@@ -14,7 +14,7 @@ export const packagesData = [
     },
     {
         id: "Simply_Andaman",
-        image: "images/trevi-fountain.jpg",
+        image: "/images/trevi-fountain.jpg",
         title: " Simply Andaman",
         location: "Iceland",
         duration: "10 Days 9 Nights",
@@ -27,7 +27,7 @@ export const packagesData = [
     },
     {
         id: "Spirational_Himachal",
-        image: "images/tower-bridge.jpg",
+        image: "/images/tower-bridge.jpg",
         title: " Spirational Himachal",
         location: "Iceland",
         duration: "10 Days 9 Nights",
@@ -36,7 +36,7 @@ export const packagesData = [
     },
     {
         id: "Greenery",
-        image: "images/iceland.jpg",
+        image: "/images/iceland.jpg",
         title: " Greenery",
         location: "Europe",
         duration: "10 Days 9 Nights",
@@ -49,7 +49,7 @@ export const packagesData = [
     },
     {
         id: "Hill_Station",
-        image: "images/europe.jpg",
+        image: "/images/europe.jpg",
         title: " Hill Station",
         location: "Iceland",
         duration: "10 Days 9 Nights",
@@ -62,7 +62,7 @@ export const packagesData = [
     },
     {
         id: "Super_Saver",
-        image: "images/burj-khalifa.jpg",
+        image: "/images/burj-khalifa.jpg",
         title: " Super Saver",
         location: "Iceland",
         duration: "10 Days 9 Nights",

@@ -17,7 +17,7 @@ export default function PackageList() {
                     .map((packages) => (
                         <Lists
                             key={packages.id}
-                            to={`/package-details/${packages.id}`}
+                            to={`../package/${packages.id}`}
                             children={packages.title}
                         />
                     )

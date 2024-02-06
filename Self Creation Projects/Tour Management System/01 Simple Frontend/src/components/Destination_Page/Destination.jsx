@@ -10,15 +10,8 @@ export default function Destination() {
             <section id="inner-page">
                 <div className="inner-area">
                     <div className="row">
-                        {destinationsData.map((destination, index) => (
-                            <DestinationContent
-                                key={index}
-                                id={destination.id}
-                                imgSrc={destination.image}
-                                name={destination.name}
-                                details={destination.details}
-                                duration={destination.duration}
-                            />
+                        {destinationsData.map((destination) => (
+                            <DestinationContent key={destination.id} destination={destination} />
                         ))}
                     </div>
                 </div>

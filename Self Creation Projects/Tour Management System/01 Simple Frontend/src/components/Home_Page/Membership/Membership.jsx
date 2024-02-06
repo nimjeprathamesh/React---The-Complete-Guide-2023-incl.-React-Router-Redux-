@@ -10,13 +10,7 @@ export default function Membership() {
 			</div>
 			<div className="row member-area">
                 {membershipData.map((membership, index) => (
-                    <MembershipContent
-                        key={index}
-                        imgSrc={membership.image}
-                        type={membership.type}
-                        location={membership.location}
-                        price={membership.price}
-                    />
+                    <MembershipContent key={index} membership={membership} />
                 ))}
 			</div>
 		</section>

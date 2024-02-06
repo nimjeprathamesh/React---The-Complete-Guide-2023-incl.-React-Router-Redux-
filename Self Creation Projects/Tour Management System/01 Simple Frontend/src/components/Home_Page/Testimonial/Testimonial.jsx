@@ -46,13 +46,7 @@ export default function Testimonial() {
                     <div className="testimonial-slider">
                         <Slider {...settings}>
                             {testimonialsData.map((testimonial) => (
-                                <TestimonialContent
-                                    key={testimonial.name}
-                                    imgSrc={testimonial.image}
-                                    feedBack={testimonial.feedBack}
-                                    name={testimonial.name}
-                                    designation={testimonial.designation}
-                                />
+                                <TestimonialContent key={testimonial.name} testimonial={testimonial} />
                             ))}
                         </Slider>
                     </div>

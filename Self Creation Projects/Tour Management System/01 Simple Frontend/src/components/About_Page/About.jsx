@@ -14,15 +14,8 @@ export default function About() {
                     <h1>DESTINATION FOR THE CLIENT.</h1>
                     <hr className="horizontal"></hr>
                     <div className="row dest-details">
-                        {destinationsData.map((destination, index) => (
-                            <AboutDestinationContent
-                                key={index}
-                                id={destination.id}
-                                imgSrc={destination.image}
-                                name={destination.name}
-                                duration={destination.duration}
-                                details={destination.details}
-                            />
+                        {destinationsData.map((destination) => (
+                            <AboutDestinationContent key={destination.id} destination={destination}/>
                         ))}
                     </div>
                 </div>
