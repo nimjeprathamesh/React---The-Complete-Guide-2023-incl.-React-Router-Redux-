@@ -1,0 +1,46 @@
+#homePageNewsletter{
+	position: relative;
+	overflow: hidden;
+}
+#homePageNewsletter .newsletter-area{
+	position: relative;
+	overflow: hidden;
+	-webkit-animation: fadeInUp 1s forwards;
+	animation: fadeInUp 1s both;
+	animation-delay: 0s;
+	visibility: visible;
+}
+@keyframes fadeInUp {
+	0% {
+	    opacity: 0;
+	    transform: translateY(100%);
+	}
+	
+	100% {
+	    opacity: 1;
+	    transform: translateY(0);
+	}
+}
+#homePageNewsletter .heading{
+	-webkit-animation: fadeInRigh 1s forwards;
+	animation: fadeInRight 1s both;
+	animation-delay: 0s;
+	visibility: visible;
+}
+@keyframes fadeInRight {
+	0% {
+	    opacity: 0;
+	    transform: translateX(100%);
+	}
+	
+	100% {
+	    opacity: 1;
+	    transform: translateX(0);
+	}
+}
+#homePageNewsletter .newsletter-area h1{
+	font-size: 56px;
+	font-weight: 100;
+	margin: 5rem 14rem;
+	text-align: center;
+}
