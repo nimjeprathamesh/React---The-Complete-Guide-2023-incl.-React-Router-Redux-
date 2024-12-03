@@ -1,0 +1,147 @@
+#homePageAboutUs{
+	position: relative;
+	overflow: hidden;
+}
+#homePageAboutUs .about-area{
+	background-color: #f5f5f5;
+	box-shadow: 0 0 5px #0003, 0 0 18px #00000030;
+    margin: 0.5rem 0;
+}
+#homePageAboutUs .about-content{
+	padding-top: 4rem;
+	-webkit-animation: bounceInRight 1s forwards;
+	animation: bounceInRight 1s both;
+    animation-delay: 0s;
+	visibility: visible;
+}
+@keyframes bounceInRight {
+	0% {
+	    opacity: 0;
+	    transform: translateX(200px);
+	}
+	
+	20% {
+	    transform: translateX(-20px);
+	}
+	
+	40% {
+	    transform: translateX(10px);
+	}
+	
+	60% {
+	    transform: translateX(-5px);
+	}
+	
+	80% {
+	    transform: translateX(2px);
+	}
+	
+	100% {
+	    opacity: 1;
+	    transform: translateX(0);
+	}
+}
+#homePageAboutUs .about-content h6{
+	color: #a0a0a0;
+	text-align: left;
+	padding-left: 20%;
+	font-size: 1rem;
+}
+#homePageAboutUs .about-content h1{
+	font-weight: 700;
+	text-align: left;
+	padding: 2% 5% 0 20%;
+	font-size: 2.5rem;
+	color: #000;
+}
+#homePageAboutUs .about-content h5{
+	font-weight: 700;
+	color: #f41844;
+	padding: 3% 0 0 20%;
+	letter-spacing: 2.5px;
+	font-size: 1.25rem;
+}
+#homePageAboutUs .about-image-overlay{
+	position: relative;
+}
+#homePageAboutUs .over_img {
+	width: 40%;
+    height: 15.2em;
+    display: block;
+    margin: 6% 0 10% 20%;
+    float: left;
+}
+#homePageAboutUs .about-overlay {
+	position: absolute;
+    left: 20%;
+    top: 3em;
+    background-color: #f41844;
+    overflow: hidden;
+    width: 40%;
+    height: 15.2em;
+	-webkit-transform: scale(0);
+	-ms-transform: scale(0);
+	transform: scale(0);
+	-webkit-transition: .3s ease;
+	transition: .9s ease;
+	opacity: 0.4;
+}
+#homePageAboutUs .about-image-overlay:hover .about-overlay {
+	-webkit-transform: scale(1);
+	-ms-transform: scale(1);
+	transform: scale(1);
+}
+#homePageAboutUs .about-image{
+	position: absolute;
+    right: 21%;
+    top: 3em;
+}
+#homePageAboutUs .about-image-overlay:hover .about-image {
+	transform: rotate(45deg);
+}
+#homePageAboutUs .about-sub-area{
+	background-color: #212121;
+    width: 30%;
+    height: auto;
+    float: left;
+    position: relative;
+    left: 10%;
+    top: 9em;
+	padding: 2% 3% 3% 3%;
+}
+#homePageAboutUs .about-sub-area h4{
+	color: #fff;
+	text-align: left;
+	font-size: 15px;
+}
+#homePageAboutUs .about-sub-area span{
+	font-size: 30px;
+	color: #f41844;
+}
+#homePageAboutUs .about-btn{
+	font-size: 22px;
+	font-weight: 800;
+	color: #f41844;
+	cursor: pointer;
+	transition: .9s ease;
+}
+#homePageAboutUs .about-btn:hover{
+	transform: translateY(4px);
+}
+#homePageAboutUs .about-btn a{
+	text-decoration: none;
+	color: #f41844;
+}
+#homePageAboutUs .about-btn a:hover{
+	color: #fff;
+}
+#homePageAboutUs .about-btn span{
+	color: #7d7d7d;
+	display: inline;
+	cursor: pointer;
+	font-size: 15px;
+	font-weight: 700;
+}
+#homePageAboutUs .about-btn span:hover{
+	color: #f41844;
+}

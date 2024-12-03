@@ -1,0 +1,23 @@
+[
+    {
+        "id": "m1",
+        "image": "images/business tour 1.jpg",
+        "type": "Business Tour",
+        "location": "Suzhou-China",
+        "price": "199"
+    },
+    {
+        "id": "m2",
+        "image": "images/family tour.jpg",
+        "type": "Family Tour",
+        "location": "Suzhou-China",
+        "price": "199"
+    },
+    {
+        "id": "m3",
+        "image": "images/business tour 2.jpg",
+        "type": "Business Tour",
+        "location": "Suzhou-China",
+        "price": "199"
+    }
+]

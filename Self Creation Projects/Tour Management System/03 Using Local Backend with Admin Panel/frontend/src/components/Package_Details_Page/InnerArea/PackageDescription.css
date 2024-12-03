@@ -1,0 +1,22 @@
+#packageDetailsPage h5{
+	font-size: 20px;
+}
+#packageDetailsPage .caption i{
+	color: #ff1944;
+}
+#packageDetailsPage p{
+	text-align: left;
+	font-size: 17px;
+	font-weight: 400;
+	font-family: Arial, Helvetica, sans-serif;
+}
+#packageDetailsPage .timeprice{
+    font-size: 17px;
+	text-align: center;
+	margin: 0;
+}
+#packageDetailsPage .timeprice span{
+    color: #ff1944;
+    font-weight: 700;
+	float: right;
+}

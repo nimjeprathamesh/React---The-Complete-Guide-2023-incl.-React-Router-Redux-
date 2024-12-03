@@ -1,0 +1,42 @@
+#homePageNewsletter .subscribe{
+	text-align: center;
+	padding-bottom: 8%;
+}
+#homePageNewsletter input[type=email] {
+	outline: none;
+	width: 100%;
+    font-size: 20px;
+    padding: 5%;
+    box-shadow: 0 0px 5px 0 rgba(0, 0, 0, 0.2), 0 0px 18px 0 rgba(0, 0, 0, 0.19);
+}
+#homePageNewsletter .subscribeButton {
+	background-color:#f41844;
+	border: none;
+	color: white;
+	padding: 1.9rem 1rem;
+    font-size: 20px;
+	font-weight: 600;
+	box-shadow: 0 0px 5px 0 rgba(0, 0, 0, 0.2), 0 0px 18px 0 rgba(0, 0, 0, 0.19);
+	cursor: pointer;
+}
+#homePageNewsletter .subscribeButtonLight:hover {
+	background-color: #000;
+	color:#f41844;
+	font-weight: 600;
+}
+#homePageNewsletter .subscribeButtonDark:hover {
+	background-color: #fff;
+	color:#f41844;
+	font-weight: 600;
+}
+#homePageNewsletter .subscribeButton:active {
+	transform: translateY(4px);
+}
+#homePageNewsletter .successMsg {
+	font-family: 'slick';
+    color: green;
+    font-size: 16px;
+    font-weight: 900;
+    text-align: left;
+    margin-left: 10%;
+}
