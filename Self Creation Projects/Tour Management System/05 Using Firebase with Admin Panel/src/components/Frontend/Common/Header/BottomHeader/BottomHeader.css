@@ -1,0 +1,29 @@
+#bottom-header{
+	position: absolute;
+	overflow: visible;
+	background: transparent;
+	z-index: 1;
+}
+#bottom-header li a{
+	color: #fff;
+	text-decoration: none;
+	font-size: 18px;
+	font-weight: 700;
+	padding: 10px 13px;
+	margin-left: 1rem;
+}
+#bottom-header li a:hover{
+	color: #f41844;
+	background-color: #ffa7b9;
+    border-radius: 5px;
+}
+#bottom-header .activeBottomHeader {
+	color: #f41844;
+	border-bottom: 2px solid #f41844;
+    border-radius: 5px;
+}
+#bottom-header .theme {
+	position: absolute;
+    top: 0.5rem;
+    left: 81rem;
+}

@@ -1,0 +1,22 @@
+#destinationDetailsPage h5{
+	font-size: 18px;
+    font-weight: 600;
+}
+#destinationDetailsPage .inner-area i{
+	position: relative;
+    font-weight: 900;
+    bottom: 0.1rem;
+	margin-right: 0.5rem;
+}
+#destinationDetailsPage p{
+	text-align: left;
+	font-size: 17px;
+	font-weight: 400;
+	margin-top: 20px;
+}
+#destinationDetailsPage .lightBorder {
+    border-color: darkslategray;
+}
+#destinationDetailsPage .darkBorder {
+    border-color: #c1babe;
+}

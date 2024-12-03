@@ -1,0 +1,30 @@
+{
+  "rules": {
+    ".read": "true",
+    ".write": "true",
+    "destinationsData": {
+      "$destinationId": {
+        ".read": "true",
+        ".write": "true"
+      }
+    },
+    "packagesData": {
+      "$packageId": {
+        ".read": "true",
+        ".write": "true"
+      }
+    },
+    "testimonialsData": {
+      "$testimonialId": {
+        ".read": "true",
+        ".write": "true"
+      }
+    },
+    "membershipsData": {
+      "$membershipId": {
+        ".read": "true",
+        ".write": "true"
+      }
+    }
+  }
+}

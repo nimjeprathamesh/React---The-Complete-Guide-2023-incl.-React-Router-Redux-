@@ -1,0 +1,39 @@
+#tourPackageHeader{
+    position: relative;
+    overflow: visible;
+    background-image: url('../../../../images/mountain.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    padding-bottom: 22%;
+}
+#tourPackageHeader .bottom-header{
+	position: absolute;
+	overflow: visible;
+	background: transparent;
+	width: 100%;
+}
+#tourPackageHeader .bottom-header h1{
+	color: #000;
+	margin-top: 9%;
+	text-align: center;
+	text-shadow: 0em 0em 0.4em rgba(255,255,255,0.6);
+	-webkit-animation: zoomIn 1s forwards;
+	animation: zoomIn 1s forwards;
+	animation-delay: 0s;
+	visibility: visible;
+}
+@keyframes zoomIn {
+	from {
+		transform: scale(0);
+	}
+	
+	to {
+		transform: scale(1);
+	}
+}
+#bottom-header .active_tout_package{
+	color: #f41844;
+    border: 2px solid;
+    border-radius: 5px;
+}

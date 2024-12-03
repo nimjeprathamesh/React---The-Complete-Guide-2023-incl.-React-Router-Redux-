@@ -1,0 +1,71 @@
+{
+  "name": "tour-management-system",
+  "version": "1.0.0",
+  "dependencies": {
+    "@babel/preset-react": "^7.24.1",
+    "@chakra-ui/icons": "^2.1.1",
+    "@chakra-ui/react": "^2.8.2",
+    "@emotion/react": "^11.11.4",
+    "@emotion/styled": "^11.11.5",
+    "@fortawesome/fontawesome-svg-core": "^6.5.2",
+    "@fortawesome/free-brands-svg-icons": "^6.5.2",
+    "@fortawesome/free-regular-svg-icons": "^6.5.2",
+    "@fortawesome/free-solid-svg-icons": "^6.5.2",
+    "@fortawesome/react-fontawesome": "^0.2.0",
+    "@react-icons/all-files": "^4.1.0",
+    "@testing-library/react": "^13.4.0",
+    "@testing-library/user-event": "^13.5.0",
+    "axios": "^1.6.2",
+    "bootstrap": "^5.2.3",
+    "firebase": "^10.11.1",
+    "framer-motion": "^11.1.7",
+    "jquery": "^3.7.1",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "react-firebase-hooks": "^5.1.1",
+    "react-icons": "^5.1.0",
+    "react-router-dom": "^6.21.3",
+    "react-scripts": "5.0.1",
+    "react-slick": "^0.29.0",
+    "slick-carousel": "^1.8.1",
+    "source-map-loader": "^4.0.1",
+    "styled-components": "^6.1.3",
+    "sweetalert": "^2.1.2",
+    "sweetalert2": "^11.7.10",
+    "swiper": "^11.0.5",
+    "web-vitals": "^2.1.4"
+  },
+  "scripts": {
+    "start": "parcel index.html",
+    "build": "parcel build",
+    "test": "jest",
+    "watch-test": "jest --watch"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/nimjeprathamesh/Namaste-React.git"
+  },
+  "keywords": [
+    "react",
+    "namaste",
+    "react",
+    "prathamesh",
+    "nimje"
+  ],
+  "author": "Prathamesh Nimje",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/nimjeprathamesh/Namaste-React/issues"
+  },
+  "homepage": "https://github.com/nimjeprathamesh/Namaste-React#readme",
+  "devDependencies": {
+    "@babel/core": "^7.24.4",
+    "@babel/node": "^7.23.9",
+    "@babel/preset-env": "^7.24.4",
+    "@testing-library/jest-dom": "^6.4.2",
+    "buffer": "^6.0.3",
+    "parcel": "^2.12.0",
+    "postcss-nesting": "^12.0.2",
+    "process": "^0.11.10"
+  }
+}

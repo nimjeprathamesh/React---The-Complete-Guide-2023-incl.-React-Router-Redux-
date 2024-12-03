@@ -1,0 +1,10 @@
+#contact_page{
+	position: relative;
+	overflow: visible;
+	padding: 0 3% 0 4%;
+}
+#contact_page .inner-area{
+    border-top-right-radius: 10px;
+    position: relative;
+    top: -4em;
+}
