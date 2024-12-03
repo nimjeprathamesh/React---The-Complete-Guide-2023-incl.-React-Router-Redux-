@@ -1,0 +1,34 @@
+#About_header{
+    position: relative;
+    overflow: visible;
+    background-image: url('../../../../images/newyork.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    padding-bottom: 20%;
+}
+#About_header .bottom-header{
+	position: absolute;
+	overflow: visible;
+	background: transparent;
+	width: 100%;
+}
+#About_header .bottom-header h1{
+	color: #000;
+	margin-top: 7%;
+	text-align: center;
+	text-shadow: 0em 0em 0.4em rgba(255,255,255,0.6);
+	-webkit-animation: zoomIn 1s forwards;
+	animation: zoomIn 1s forwards;
+    animation-delay: 0s;
+	visibility: visible;
+}
+@keyframes zoomIn {
+	from {
+	    transform: scale(0);
+	}
+	
+	to {
+	    transform: scale(1);
+	}
+}
