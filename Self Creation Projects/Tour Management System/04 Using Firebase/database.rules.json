@@ -1,0 +1,12 @@
+{
+  "rules": {
+    ".read": "true",
+    ".write": "true",
+    "destinationsData": {
+      "$destinationId": {
+        ".read": "true",
+        ".write": "true"
+      }
+    }
+  }
+}

@@ -1,0 +1,88 @@
+#homePageBanner{
+	position: relative;
+	overflow: hidden;
+	-webkit-animation: bounceIn 1s both;
+	animation: bounceIn 1s both;
+    animation-delay: 0s;
+	visibility: visible;
+}
+@keyframes bounceIn {
+	0% {
+	    opacity: 0;
+	    transform: scale(0.3);
+	}
+	
+	20% {
+	    transform: scale(1.1);
+	}
+	
+	40% {
+	    transform: scale(0.9);
+	}
+	
+	60% {
+	    opacity: 1;
+	    transform: scale(1.03);
+	}
+	
+	80% {
+	    transform: scale(0.97);
+	}
+	
+	100% {
+	    opacity: 1;
+	    transform: scale(1);
+	}
+}
+#homePageBanner .container {
+	position: relative;
+	text-align: center;
+	color: white;
+}
+#homePageBanner .ban-area img{
+	width: 100%;
+}
+#homePageBanner .ban-area h1 {
+	position: absolute;
+	top: 45%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	color: black;
+	width: 100%;
+	font-size: 50px;
+	padding: 15%;
+	text-align: center;
+	font-weight: 100;
+}
+#homePageBanner .ban-area h1 span {
+	font-weight: 800;
+	font-family: Arial Black;
+}
+#homePageBanner .banner-btn {
+	position: absolute;
+	top: 70%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	color: #f41844;
+	display: inline;
+	cursor: pointer;
+	transition: .9s ease;
+	font-weight: 900;
+}
+#homePageBanner .banner-btn:hover{
+	font-size:20px;
+}
+#homePageBanner .banner-btn a{
+	text-decoration: none;
+	color: #f41844;
+}
+#homePageBanner .banner-btn a:hover{
+	color: black;
+}
+#homePageBanner .banner-btn span {
+	color: black;
+	font-weight: 600;
+}
+#homePageBanner .banner-btn span:hover{
+	color: #f41844;
+}

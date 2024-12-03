@@ -1,0 +1,73 @@
+#homePageAboutUs .contact-area{
+	background-color: #212121;
+	color: white;
+	width: 100%;
+	padding-bottom: 13.4rem;
+	-webkit-animation: bounceInLeft 1s forwards;
+	animation: bounceInLeft 1s forwards;
+    animation-delay: 0s;
+	visibility: visible;
+}
+@keyframes bounceInLeft {
+	0% {
+	    opacity: 0;
+	    transform: translateX(-200px);
+	}
+	60% {
+	    opacity: 1;
+	    transform: translateX(30px);
+	}
+	80% {
+	    transform: translateX(-10px);
+	}
+	100% {
+	    transform: translateX(0);
+	}
+}
+#homePageAboutUs .contact-area h1{
+	font-size: 40px;
+	text-align: left;
+	padding: 8% 0 0 10%;
+	font-weight: normal;
+}
+#homePageAboutUs .contact-area form{
+	padding: 0 10%;
+}
+#homePageAboutUs span{
+	font-weight: 700;
+	display: inline;
+}
+#homePageAboutUs .homeCont{
+	margin: 2% 0;
+	padding: 3%;
+	width: 100%;
+	font-size: 13px;
+	font-family: Arial, Helvetica, sans-serif, FontAwesome;
+	box-shadow: 0 0px 5px 0 rgba(0, 0, 0, 0.2), 0 0px 18px 0 rgba(0, 0, 0, 0.19);
+}
+#homePageAboutUs textarea[type=text] {
+	margin: 2% 0;
+	padding: 3%;
+	font-size: 13px;
+	font-family: Arial, Helvetica, sans-serif, FontAwesome;
+	width: 100%;
+	box-shadow: 0 0px 5px 0 rgba(0, 0, 0, 0.2), 0 0px 18px 0 rgba(0, 0, 0, 0.19);
+}
+#homePageAboutUs .submitButton {
+	background-color: #f41844;
+	color: #fff;
+	box-shadow: 0 0px 5px 0 rgba(0, 0, 0, 0.2), 0 0px 18px 0 rgba(0, 0, 0, 0.19);
+}
+#homePageAboutUs .submitButton:hover {
+	background-color: #fff;
+	color:#000;
+}
+#homePageAboutUs .submitButton:active {
+	transform: translateY(4px);
+}
+#homePageAboutUs .successMsg {
+	font-family: 'slick';
+	color: green;
+	font-size: 13px;
+	font-weight: 900;
+}

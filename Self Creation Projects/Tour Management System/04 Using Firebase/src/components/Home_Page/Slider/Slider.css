@@ -1,0 +1,28 @@
+#homePageSlider .theme-btn-s2{
+    background: transparent;
+	border: 2px solid #fff;
+	border-radius: 30px;
+    color: #fff;
+	font-size: 20px;
+	font-weight: 700;
+	padding: 1.8rem 4rem;
+	box-shadow: 0 0px 5px 0 rgba(0, 0, 0, 0.2), 0 0px 18px 0 rgba(0, 0, 0, 0.19);
+}
+#homePageSlider .theme-btn-s2:hover{
+	border: 2px solid #f41844;
+	color:#fff;
+    -webkit-animation: halftone 1s forwards;
+            animation: halftone 1s forwards;
+	background: radial-gradient(circle, #f41844 0.2em, transparent 0.25em) 0 0/1.25em 1.25em,
+	radial-gradient(circle, #f41844 0.2em, transparent 0.25em) 6.25em 6.25em/1.25em 1.25em;
+}
+@-webkit-keyframes halftone {
+    100% {
+        background-size: 2.375em 2.375em, 0.1em 0.1em;
+    }
+}
+@keyframes halftone {
+    100% {
+        background-size: 2.375em 2.375em, 0.1em 0.1em;
+    }
+}
