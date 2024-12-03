@@ -2,6 +2,7 @@
     background-color: #131313;
 	padding: 10% 12% 30% 10%;
     margin-left: -12px;
+	box-shadow: 0 0 5px #0003, 0 0 18px #00000030;
     border-radius: 0 0px 108px 0;
 	-webkit-animation: zoomIn 1s forwards;
 	animation: zoomIn 1s forwards;
@@ -17,30 +18,12 @@
 	    transform: scale(1);
 	}
 }
-@media only screen and (min-width: 425px) and (max-width: 767px) {
-	#contact_page .contact-area {
-		width: 107%;
-		border-radius: 0 10px 108px 0;
-	}
-}
-@media only screen and (min-width: 375px) and (max-width: 424px) {
-	#contact_page .contact-area {
-		width: 108%;
-		border-radius: 0 10px 108px 0;
-	}
-}
-@media only screen and (max-width: 374px) {
-	#contact_page .contact-area {
-		width: 110%;
-		border-radius: 0 10px 108px 0;
-	}
-}
 #contact_page .contact-area h1{
 	text-align: left;
     font-weight: 800;
     font-size: 50px;
     color: #fff;
-    margin-bottom: 5%;
+    margin-bottom: 3rem;
 	-webkit-animation: bounceInUp 1s forwards;
 	animation: bounceInLeft 1s both;
     animation-delay: 0s;
@@ -85,12 +68,8 @@
 }
 #contact_page .input{
 	outline: none;
-    margin: 1%;
-    width: 100%;
-    padding: 2%;
-    background: transparent;
-	color: #fff;
     border: none;
+	border-radius: 0;
     border-bottom: 1px solid #fff;
     font-family: Arial, Helvetica, sans-serif, FontAwesome;
 }
@@ -98,17 +77,10 @@
     color: #fff;
 }
 #contact_page .textarea{
-    width: 100%;
-    margin: 1%;
-    padding: 2%;
-    background: transparent;
-	color: #fff;
     border: none;
+	border-radius: 0;
     border-bottom: 1px solid #fff;
     font-family: Arial, Helvetica, sans-serif, FontAwesome;
-}
-#contact_page .textarea::placeholder{
-	color: #fff;
 }
 #contact_page .submitButton{
     float: right;

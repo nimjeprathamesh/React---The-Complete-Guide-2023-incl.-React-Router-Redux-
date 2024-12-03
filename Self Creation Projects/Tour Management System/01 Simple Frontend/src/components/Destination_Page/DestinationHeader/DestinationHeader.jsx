@@ -1,15 +1,12 @@
+import { Box, Heading } from '@chakra-ui/react';
 import './DestinationHeader.css';
 
 export default function DestinationHeader() {
     return (
-        <section id="destHeader">
-            <header className="bottom-header">
-                <div className="container">
-                    <div className="row">
-                        <h1>Destination</h1>
-                    </div>
-                </div>
-            </header>
-        </section>
+        <Box id="destHeader">
+            <Box className="bottom-header">
+                <Heading as='h1'>Destination</Heading>
+            </Box>
+        </Box>
     );
 }

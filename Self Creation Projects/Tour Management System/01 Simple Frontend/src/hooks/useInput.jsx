@@ -1,24 +1,15 @@
-import React, { useEffect, useRef, useState } from 'react';
+import { useDisclosure } from '@chakra-ui/react';
+import React, { useRef } from 'react';
 import Modal from "../components/UI/Modal/Modal.jsx";
 
 export default function useInput({successMsg}) {
     const formRef = useRef(null);
-    const [isModalOpen, setIsModalOpen] = useState(false);
-
-    useEffect(() => {
-        return () => {
-            setIsModalOpen(false);
-        };
-    }, [isModalOpen]);
+    const { isOpen, onOpen, onClose } = useDisclosure();
 
     function handleSubmit(event) {
         event.preventDefault();
 
-        const fd = new FormData(event.target);
-        const customerData = Object.fromEntries(fd.entries());
-        console.log(customerData);
-
-        setIsModalOpen(true);
+        onOpen();
 
         if (formRef.current) {
             formRef.current.reset();
@@ -26,20 +17,11 @@ export default function useInput({successMsg}) {
     }
 
     const dialogBox = (
-        <Modal open={isModalOpen}>
-            <h1>
-                <div className='success-checkmark'>
-                    <div className='check-icon'>
-                        <span className='icon-line line-tip'></span>
-                        <span className='icon-line line-long'></span>
-                        <div className='icon-circle'></div>
-                        <div className='icon-fix'></div>
-                    </div>
-                </div>
-            </h1>
-            <h3>Good Job!</h3>
-            <p>{successMsg}</p>
-        </Modal>
+        <Modal
+            isOpen={isOpen}
+            message={successMsg}
+            onConfirm={onClose}
+        />
     );
 
     return {

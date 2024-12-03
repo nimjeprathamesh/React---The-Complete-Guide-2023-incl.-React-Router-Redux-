@@ -6,21 +6,11 @@
 	background-attachment: fixed;
 	padding-bottom: 22%;
 }
-@media only screen and (min-width: 425) and (max-width: 767px) {
-	#packageDetailsHeader .top-header .header-area{
-		padding-bottom: 40%;
-	}
-}
 #packageDetailsHeader .bottom-header{
 	position: absolute;
 	overflow: visible;
 	background: transparent;
 	width: 100%;
-}
-@media only screen and (max-width: 1023px) {
-	#packageDetailsHeader .bottom-header{
-		padding-bottom: 18%;
-	}
 }
 #packageDetailsHeader .bottom-header h1{
 	color: #000;
@@ -39,15 +29,5 @@
 	
 	to {
 		transform: scale(1);
-	}
-}
-@media only screen and (min-width: 375px) and (max-width: 1023px) {
-	#packageDetailsHeader .bottom-header h1{
-		margin-top: 10%;
-	}
-}
-@media only screen and (max-width: 374px) {
-	#packageDetailsHeader .bottom-header h1{
-		margin: 15% 0 15% 0;
 	}
 }

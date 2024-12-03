@@ -1,27 +1,25 @@
+import { Box, Divider, Heading, List, ListItem } from '@chakra-ui/react';
 import React from 'react';
-import { menuItem } from '../../../../MenuItem';
-import Lists from '../../../../UI/Lists';
+import { NavLink } from 'react-router-dom';
+import { menuItem } from '../../../MenuItem.jsx';
 import '../MiddleFooter.css';
 
 export default function QuickLinks() {
     return (
-        <div className="col-xl-3 col-lg-3 col-md-6 col-sm-6 col-xs-12 col-12">
-            <div className="middlefooter-area">
-                <div className="heading">
-                    Quick Links
-                    <hr></hr>
-                </div>
-                <ul className="unorder">
-                    {menuItem.map((item, index) => (
-                        <Lists
-                            key={index}
+        <Box className="middlefooter-area">
+            <Heading className='heading'>Quick Links<Divider className='hr' /></Heading>
+            <List className="unorder">
+                {menuItem.map((item, index) => (
+                    <ListItem key={index}>
+                        <NavLink
                             to={item.to}
-                            children={item.name}
                             className={({isActive}) => (isActive ? 'activeLinks' : undefined)}
-                        />
-                    ))}
-                </ul>
-            </div>
-        </div>
+                        >
+                            {item.name}
+                        </NavLink>
+                    </ListItem>
+                ))}
+            </List>
+        </Box>
     );
 }

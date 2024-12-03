@@ -1,28 +1,34 @@
+import { Box, Button, Flex, FormControl, Icon, Input } from "@chakra-ui/react";
 import React from "react";
+import { FiBell } from "react-icons/fi";
+import { Form } from "react-router-dom";
 import useInput from "../../../hooks/useInput.jsx";
-import Button from '../../UI/Button';
-import Input from '../../UI/Input';
+import { useTheme } from '../../../hooks/useTheme.jsx';
 import './SubscribeForm.css';
 
 export default function SubscribeForm() {
     const successMsg = "You subscribed our website.";
     const {formRef, handleSubmit, dialogBox} = useInput({successMsg});
+    const {isDark} = useTheme();
+    const buttonHoverClass = isDark ? 'subscribeButtonDark' : 'subscribeButtonLight';
 
     return (
-        <>
+        <Box>
             {dialogBox}
-            <div className="subscribe">
-                <form ref={formRef} onSubmit={handleSubmit}>
-                    <div className="row">
-                        <div className="col-xl-8 col-lg-8 col-md-12 col-sm-12 col-xs-12 col-12">
-                            <Input name='email' type="email" placeholder="Enter your email" />
-                        </div>
-                        <div className="col-xl-4 col-lg-4 col-md-12 col-sm-12 col-xs-12 col-12 p-0">
-                            <Button type='submit' className="subscribeButton" children="SUBSCRIBE" />
-                        </div>
-                    </div>
-                </form>
-            </div>
-        </>
+            <Box className="subscribe">
+                <Form ref={formRef} onSubmit={handleSubmit}>
+                    <Flex wrap="wrap" align="center" padding='0 17rem'>
+                        <FormControl flex="1" mr={4}>
+                            <Input name='mail' type="email" placeholder="Enter your email" />
+                        </FormControl>
+                        <FormControl flex="0">
+                            <Button type='submit' className={`subscribeButton ${buttonHoverClass}`}>
+                                <Icon marginRight='0.5rem' as={FiBell} />SUBSCRIBE
+                            </Button>
+                        </FormControl>
+                    </Flex>
+                </Form>
+            </Box>
+        </Box>
     );
 }

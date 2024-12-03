@@ -1,28 +1,29 @@
-import { usePackageContext } from '../../../store/PackagesContext';
-import { packagesData } from '../../Dummy_Data/PackagesData';
-import Lists from '../../UI/Lists';
+import { Box, Divider, Heading, List, ListItem } from '@chakra-ui/react';
+import { NavLink } from 'react-router-dom';
+import { useTheme } from '../../../hooks/useTheme.jsx';
 import './PackageList.css';
 
-export default function PackageList() {
-    const { excludeName } = usePackageContext();
+export default function PackageList({packagesData, excludeName}) {
+    const {isDark} = useTheme();
+    const borderColor = isDark ? 'lightBorder' : 'darkBorder';
 
     return (
-        <div className="row inner-box-2">
-            <h6>OTHER PACKAGES</h6>
-            <hr className="hr-1" />
-            <hr className="hr-2" />
-            <ul>
+        <Box className="inner-box-2">
+            <Heading as='h6' fontSize='1rem'>OTHER PACKAGES</Heading>
+            <Divider className='hr-1' />
+            <Divider className='hr-2' />
+            <List className={borderColor}>
                 {packagesData
                     .filter((packages) => packages.title !== excludeName)
                     .map((packages) => (
-                        <Lists
-                            key={packages.id}
-                            to={`../package/${packages.id}`}
-                            children={packages.title}
-                        />
+                        <ListItem key={packages.id} className={borderColor}>
+                            <NavLink to={`../package/${packages.id}`}>
+                                {packages.title}
+                            </NavLink>
+                        </ListItem>
                     )
                 )}
-            </ul>
-        </div>
+            </List>
+        </Box>
     );
 }

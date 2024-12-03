@@ -1,12 +1,10 @@
 #footer .lowerfooter{
-	text-align: center;
-	background-color: #1c1c1c;
-	padding: 4%;
+	display: flex;
+	justify-content: center;
+	background-color: #1C1C1C;
 }
 #footer .lowerfooter-area{
-	color: #606060;
 	font-size: 15px;
-	position: relative;
 	-webkit-animation: bounceInUp 1s forwards;
 	animation: bounceInUp 1s both;
 	animation-delay: 0s;
@@ -38,12 +36,4 @@
 	    opacity: 1;
 	    transform: translateY(0);
 	}
-}
-@media only screen and (min-width: 375px) and (max-width: 424px) {
-	#footer .lowerfooter-area{
-		font-size: 14px;
-	}
-}
-#footer .symbol{
-	color: white;
 }

@@ -1,16 +1,27 @@
 {
   "name": "tour-management-system",
-  "version": "0.1.0",
-  "private": true,
+  "version": "1.0.0",
   "dependencies": {
-    "@testing-library/jest-dom": "^5.17.0",
+    "@babel/preset-react": "^7.24.1",
+    "@chakra-ui/icons": "^2.1.1",
+    "@chakra-ui/react": "^2.8.2",
+    "@emotion/react": "^11.11.4",
+    "@emotion/styled": "^11.11.5",
+    "@fortawesome/fontawesome-svg-core": "^6.5.2",
+    "@fortawesome/free-brands-svg-icons": "^6.5.2",
+    "@fortawesome/free-regular-svg-icons": "^6.5.2",
+    "@fortawesome/free-solid-svg-icons": "^6.5.2",
+    "@fortawesome/react-fontawesome": "^0.2.0",
+    "@react-icons/all-files": "^4.1.0",
     "@testing-library/react": "^13.4.0",
     "@testing-library/user-event": "^13.5.0",
     "axios": "^1.6.2",
     "bootstrap": "^5.2.3",
+    "framer-motion": "^11.1.7",
     "jquery": "^3.7.1",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
+    "react-icons": "^5.1.0",
     "react-router-dom": "^6.21.3",
     "react-scripts": "5.0.1",
     "react-slick": "^0.29.0",
@@ -23,31 +34,35 @@
     "web-vitals": "^2.1.4"
   },
   "scripts": {
-    "start": "react-scripts start",
-    "build": "react-scripts build",
-    "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "start": "parcel index.html",
+    "build": "parcel build",
+    "test": "jest",
+    "watch-test": "jest --watch"
   },
-  "eslintConfig": {
-    "extends": [
-      "react-app",
-      "react-app/jest"
-    ]
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/nimjeprathamesh/Namaste-React.git"
   },
-  "browserslist": {
-    "production": [
-      ">0.2%",
-      "not dead",
-      "not op_mini all"
-    ],
-    "development": [
-      "last 1 chrome version",
-      "last 1 firefox version",
-      "last 1 safari version"
-    ]
+  "keywords": [
+    "react",
+    "namaste",
+    "react",
+    "prathamesh",
+    "nimje"
+  ],
+  "author": "Prathamesh Nimje",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/nimjeprathamesh/Namaste-React/issues"
   },
+  "homepage": "https://github.com/nimjeprathamesh/Namaste-React#readme",
   "devDependencies": {
+    "@babel/core": "^7.24.4",
+    "@babel/node": "^7.23.9",
+    "@babel/preset-env": "^7.24.4",
+    "@testing-library/jest-dom": "^6.4.2",
+    "parcel": "^2.12.0",
     "postcss-nesting": "^12.0.2",
-    "tailwindcss": "^3.4.0"
+    "process": "^0.11.10"
   }
 }

@@ -3,7 +3,7 @@
 	padding: 5% 5%;
 }
 #footer .middlefooter-area{
-	background-color: #212121;
+	width: 100%;
 	-webkit-animation: bounceInUp 1s forwards;
 	animation: bounceInUp 1s both;
 	animation-delay: 0s;
@@ -36,16 +36,10 @@
 	    transform: translateY(0);
 	}
 }
-@media only screen and (min-width: 375px) and (max-width: 1023px) {
-	#footer .middlefooter-area{
-		margin-top: 10%;
-	}
-}
 #footer .middlefooter-logo{
-	margin: 4% 0 0 5%;
+	margin: 0.2rem 0 0 1rem;
 }
 #footer .middlefooter-area p{
-	color: #606060;
 	font-size: 14px;
 	text-align: left;
 	line-height: 1.5;
@@ -60,27 +54,26 @@
 	box-shadow: 0 0px 2px 0 #fff, 0 0px 18px 0 rgba(0, 0, 0, 0.19);
 }
 #footer .heading{
-	color: white;
 	font-weight: 600;
-	font-size: 30px;
+	font-size: 28px;
 	margin-left: 10%;
+	color: #fff;
 }
-#footer .heading hr{
+#footer .heading .hr{
 	width: 20%;
 	height: 5px;
-	background-color: #606060;
+	background-color: #323232;
 	border: none;
 	border-radius: 20px;
 	transition: .9s ease;
 	opacity: 1;
 }
-#footer .middlefooter-area:hover .heading hr{
+#footer .middlefooter-area:hover .heading .hr{
 	width: 100%;
 	background-color:#f41844;
 }
 #footer ul.unorder {
 	list-style-type: none;
-	color: #606060;
 	font-size: 17px;
 	line-height: 2;
 	font-weight: 500;
@@ -108,20 +101,19 @@
 	background: #161616;
 }
 #footer li a{
-	color: #606060;
-	text-decoration: none;
 	padding: 0 5%;
 }
 #footer li a::before{
 	content: '\003E';
+	margin-right: 0.5rem;
 }
 #footer li a:hover{
 	color: #f41844;
 }
 #footer li .activeLinks{
 	color: #f41844;
-    background-color: #1c1c1c;
     width: 100%;
+	border-radius: 6px;
     display: block;
 	margin: 1% 0 1% -1%;
     box-shadow: 0 0px 2px 0 #fff, 0 0px 18px 0 rgba(0, 0, 0, 0.19);

@@ -1,34 +1,43 @@
+import { TimeIcon } from '@chakra-ui/icons';
+import { Box, Button, Card, CardBody, CardFooter, Heading, Icon, Image, Stack, Text } from '@chakra-ui/react';
+import React from 'react';
+import { FiChevronsRight } from "react-icons/fi";
 import { Link } from 'react-router-dom';
+import { useTheme } from '../../hooks/useTheme.jsx';
 import { useDestinationContext } from '../../store/DestinationContext.jsx';
 import './Destination.css';
 
 export default function DestinationContent({destination}) {
-    const { setExcludeName } = useDestinationContext();
+    const { setExcludedName } = useDestinationContext();
+    const {isDark} = useTheme();
+    const buttonHoverClass = isDark ? 'service-btn-dark' : 'service-btn-light';
 
-    const handleReadMoreClick = () => {
-        setExcludeName(destination.name);
+    function handleReadMoreClick() {
+        setExcludedName(destination.name);
     };
 
     return (
-        <div className="col-xxl-3 col-xl-3 col-lg-4 col-md-6 col-sm-6 col-xs-12 col-12">
-            <div className="destination">
-                <div className="desti-img-overlay">
-                    <img src={destination.image} alt='Destination' />
-                    <div className="desti-overlay">
-
-                    </div>
-                </div>
-                <h5>{destination.name}</h5>
-                <p>{destination.details}</p>
-                <i>&#xf017; {destination.duration};</i>
-                <Link
-                    to={`../destination/${destination.id}`}
-                    className="service-btn"
-                    onClick={handleReadMoreClick}
-                >
-                    Read more
+        <Card maxW='sm' className="destination">
+            <CardBody p={0} overflow='hidden'>
+                <Box className="desti-img-overlay">
+                    <Image src={destination.image} borderTopRadius='lg' alt='Destination' />
+                    <Box className="desti-overlay"></Box>
+                </Box>
+                <Stack p={4} spacing='3'>
+                    <Heading size='md'>{destination.name}</Heading>
+                    <Text as='p'>{destination.details}</Text>
+                    <Text>
+                        <Icon as={TimeIcon} position='relative' bottom='0.1rem' mr={1} />{destination.duration}
+                    </Text>
+                </Stack>
+            </CardBody>
+            <CardFooter pt={0}>
+                <Link to={`../destination/${destination.id}`} onClick={handleReadMoreClick}>
+                    <Button className={`service-btn ${buttonHoverClass}`}>
+                        Read more<Icon as={FiChevronsRight} />
+                    </Button>
                 </Link>
-            </div>
-        </div>
+            </CardFooter>
+        </Card>
     );
 }

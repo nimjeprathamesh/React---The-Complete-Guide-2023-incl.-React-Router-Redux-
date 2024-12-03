@@ -39,23 +39,8 @@
 	}
 }
 #homePageNewsletter .newsletter-area h1{
-	font-size: 50px;
+	font-size: 56px;
 	font-weight: 100;
-	margin-top: 8%;
+	margin: 5rem 14rem;
 	text-align: center;
-}
-@media only screen and (min-width: 375px) and (max-width: 767px) {
-	#homePageNewsletter .newsletter-area h1{
-		font-size: 38px;
-		padding: 2% 15% 3% 12%;
-	}
-}
-@media only screen and (max-width: 374px) {
-	#homePageNewsletter .newsletter-area h1{
-		font-size: 38px;
-		padding: 2% 15% 3% 15%;
-	}
-}
-#homePageNewsletter .newsletter-area h1 span{
-	font-weight: 700;
 }

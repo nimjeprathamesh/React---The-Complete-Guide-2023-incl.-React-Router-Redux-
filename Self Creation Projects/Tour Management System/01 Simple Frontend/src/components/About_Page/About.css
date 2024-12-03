@@ -1,56 +1,14 @@
 #description_page{
 	position: relative;
 	overflow: visible;
-	background-color: #fff;
 	bottom: 50px;
 }
-@media only screen and (min-width: 768px) and (max-width: 1023px) {
-	#description_page {
-		margin-top: 15%;
-	}
-}
-@media only screen and (min-width: 425px) and (max-width: 767px) {
-	#description_page {
-		margin-top: 30%;
-	}
-}
-@media only screen and (min-width: 375px) and (max-width: 424px) {
-	#description_page {
-		margin-top: 35%;
-	}
-}
-@media only screen and (max-width: 374px) {
-	#description_page {
-		margin-top: 50%;
-	}
-}
-
-
 #description_page .dest-area{
 	padding: 0 5% 5% 5%;
 }
-@media only screen and (min-width: 425px) and (max-width: 767px) {
-	#description_page .dest-area{
-		padding: 0 8% 5% 8%;
-	}
-}
-@media only screen and (min-width: 375px) and (max-width: 424px) {
-	#description_page .dest-area{
-		padding: 0 9% 5% 9%;
-	}
-}
-@media only screen and (max-width: 374px) {
-	#description_page .dest-area{
-		padding: 0 11% 5% 11%;
-	}
-}
-#description_page .dest-area h1{
-	margin-bottom: 1%;
-}
 #description_page .destination{
     box-shadow: 0.4px 0px 0px 0px #a0a0a0, 0px 0.4px 0px 0px #a0a0a0;
-    padding-bottom: 20px;
-	margin: 0 0 12% 2%;
+    margin-bottom: 1.3rem;
 	overflow: hidden;
 	-webkit-animation: zoomIn 1s forwards;
 	animation: zoomIn 1s forwards;
@@ -68,6 +26,7 @@
 #description_page .desti-img-overlay{
     position: relative;
     width: 100%;
+	overflow: hidden;
 }
 #description_page .desti-img-overlay img{
     height: 270px;
@@ -95,18 +54,14 @@
     height: 100%;
 	transform: scale(1.1);
 }
-#description_page .destination h5{
-	margin: 5% 0 5% 0;
-}
 #description_page .destination p{
     font-size: 14px;
-    text-align: left;
-	color: #a0a0a0;
 	overflow: hidden;
 	display: -webkit-box;
 	-webkit-line-clamp: 2;
 			line-clamp: 2;
 	-webkit-box-orient: vertical;
+	margin-bottom: 0;
 }
 #description_page .destination i{
     font-family: Arial, Helvetica, sans-serif, fontawesome;
@@ -115,38 +70,26 @@
 }
 #description_page .service-btn{
 	background-color: #f41844;
-    width: 58%;
 	display: block;
-    padding: 4%;
-    padding-left: 10%;
     margin: 5% 0 0 1%;
 	text-decoration: none;
     color: #fff;
     font-size: 20px;
     font-weight: 400;
 }
-@media only screen and (min-width: 1024px) and (max-width: 1325px) {
-	#description_page .service-btn{
-		width: 72%;
-	}
-}
-@media only screen and (min-width: 425px) and (max-width: 767px) {
-	#description_page .service-btn{
-		width: 40%;
-		padding: 2%;
-		padding-left: 6%;
-	}
-}
-@media only screen and (max-width: 375px) {
-	#description_page .service-btn{
-		padding-left: 8%;
-	}
-}
-#description_page .service-btn:hover{
+#description_page .service-btn-light:hover{
     -webkit-animation: halftone 1s forwards;
             animation: halftone 1s forwards;
-    background: radial-gradient(circle, #000 0.2em, transparent 0.25em) 0 0/1.25em 1.25em, 
+    background: radial-gradient(circle, #000 0.2em, transparent 0.25em) 0 0/1.25em 1.25em,
     radial-gradient(circle, #000 0.2em, transparent 0.25em) 6.25em 6.25em/1.25em 1.25em;
+}
+#description_page .service-btn-dark:hover{
+	color: #000;
+	font-weight: 600;
+    -webkit-animation: halftone 1s forwards;
+            animation: halftone 1s forwards;
+    background: radial-gradient(circle, #fff 0.2em, transparent 0.25em) 0 0/1.25em 1.25em,
+    radial-gradient(circle, #fff 0.2em, transparent 0.25em) 6.25em 6.25em/1.25em 1.25em;
 }
 @-webkit-keyframes halftone {
     100% {

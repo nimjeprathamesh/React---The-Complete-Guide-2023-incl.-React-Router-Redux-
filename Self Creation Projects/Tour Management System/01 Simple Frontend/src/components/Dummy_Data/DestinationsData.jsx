@@ -1,7 +1,8 @@
+
 export const destinationsData = [
     {
         id: "Newyork",
-        image: "/images/tower-bridge.jpg",
+        image: require("../../images/tower-bridge.jpg"),
         name: " Newyork",
         duration: "5 Days 5 Nights",
         date: 'June 26, 2023',
@@ -13,7 +14,7 @@ export const destinationsData = [
     },
     {
         id: "Dubai",
-        image: "/images/burj-khalifa.jpg",
+        image: require("../../images/burj-khalifa.jpg"),
         name: " Dubai",
         duration: "8 Days 9 nights",
         date: 'May 24, 2023',
@@ -25,7 +26,7 @@ export const destinationsData = [
     },
     {
         id: "Sikkim",
-        image: "/images/trevi-fountain.jpg",
+        image: require("../../images/trevi-fountain.jpg"),
         name: " Sikkim",
         duration: "4 Days 5 Nights",
         date: 'May 24, 2023',
@@ -37,7 +38,7 @@ export const destinationsData = [
     },
     {
         id: "Bangkok_Thailand",
-        image: "/images/iceland.jpg",
+        image: require("../../images/iceland.jpg"),
         name: " Bangkok, Thailand",
         duration: "5 Days 5 Nights",
         date: 'May 24, 2023',
@@ -49,7 +50,7 @@ export const destinationsData = [
     },
     {
         id: "Marseille_France",
-        image: "/images/marseille_france.jpg",
+        image: require("../../images/marseille_france.jpg"),
         name: " Marseille, France",
         duration: "5 Days 6 Nights",
         date: 'May 24, 2023',
@@ -63,7 +64,7 @@ export const destinationsData = [
     },
     {
         id: "Bordeaux_France",
-        image: "/images/bordeaux_france.jpg",
+        image: require("../../images/bordeaux_france.jpg"),
         name: " Bordeaux, France",
         duration: "5 Days 6 Nights",
         date: 'May 24, 2023',
@@ -75,7 +76,7 @@ export const destinationsData = [
     },
     {
         id: "Paris_France",
-        image: "/images/paris_france.jpg",
+        image: require("../../images/paris_france.jpg"),
         name: " Paris, France",
         duration: "5 Days 6 Nights",
         date: 'May 24, 2023',
@@ -87,7 +88,7 @@ export const destinationsData = [
     },
     {
         id: "Nice_France",
-        image: "/images/nice_france.jpg",
+        image: require("../../images/nice_france.jpg"),
         name: " Nice, France",
         duration: "5 Days 6 Nights",
         date: 'May 24, 2023',

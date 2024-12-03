@@ -1,31 +1,17 @@
 #contactUsHeader{
     position: relative;
     overflow: visible;
-    background-image: url('/public/images/Contact.jpg');
+    background-image: url('../../../images/Contact.jpg');
     background-repeat: no-repeat;
     background-size: cover;
     background-attachment: fixed;
     padding-bottom: 22%;
-}
-@media only screen and (max-width: 1023px) {
-	#contactUsHeader{
-		background-image: none;
-	}
 }
 #contactUsHeader .bottom-header{
 	position: absolute;
 	overflow: visible;
 	background: transparent;
 	width: 100%;
-}
-@media only screen and (max-width: 1023px) {
-	#contactUsHeader .bottom-header{
-		background-image: url('/public/images/Contact.jpg');
-		background-repeat: no-repeat;
-		background-size: cover;
-		background-attachment: fixed;
-		padding-bottom: 18%;
-	}
 }
 #contactUsHeader .bottom-header h1{
 	color: #000;
@@ -46,26 +32,8 @@
 	    transform: scale(1);
 	}
 }
-@media only screen and (min-width: 375px) and (max-width: 1023px) {
-	#contactUsHeader .bottom-header h1{
-		margin-top: 10%;
-	}
-}
-@media only screen and (max-width: 374px) {
-	#contactUsHeader .bottom-header h1{
-		margin-top: 15%;
-	}
-}
 #bottom-header .active_contact_us {
 	color: #f41844;
     border: 2px solid;
     border-radius: 5px;
-}
-@media only screen and (max-width: 1023px) {
-	#bottom-header .active_contact_us{
-		color: #fff !important;
-		background-color: #f41844;
-		border-radius: 5px;
-		border: none;
-	}
 }

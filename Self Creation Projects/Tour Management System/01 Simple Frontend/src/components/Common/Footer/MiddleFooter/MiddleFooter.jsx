@@ -1,3 +1,4 @@
+import { Box, Flex } from '@chakra-ui/react';
 import './MiddleFooter.css';
 import DescriptionArea from './MiddleFooterArea/DescriptionArea.jsx';
 import DestinationsArea from './MiddleFooterArea/DestinationsArea.jsx';
@@ -6,11 +7,13 @@ import QuickLinks from './MiddleFooterArea/QuickLinks.jsx';
 
 export default function MiddleFooter() {
     return (
-        <div className="row middlefooter">
-            <DescriptionArea />
-            <QuickLinks />
-            <PackagesArea />
-            <DestinationsArea />
-        </div>
+        <Box className="middlefooter">
+            <Flex justifyContent='space-between' gap={4}>
+                <DescriptionArea />
+                <QuickLinks />
+                <PackagesArea />
+                <DestinationsArea />
+            </Flex>
+        </Box>
     );
 }

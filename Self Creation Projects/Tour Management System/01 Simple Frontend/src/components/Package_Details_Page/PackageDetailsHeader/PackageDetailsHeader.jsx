@@ -1,13 +1,13 @@
+import { Box, Heading, Text } from '@chakra-ui/react';
 import { useParams } from 'react-router-dom';
-import { packagesData } from '../../Dummy_Data/PackagesData';
 import './PackageDetailsHeader.css';
 
-export default function PackageDetailsHeader() {
+export default function PackageDetailsHeader({packagesData}) {
     const { id } = useParams();
     const selectedPackage = packagesData.find((packages) => packages.id === id);
 
     if (!selectedPackage) {
-        return <div>Destination not found</div>;
+        return <Text>Destination not found</Text>;
     }
 
     const backgroundImageStyle = {
@@ -15,14 +15,10 @@ export default function PackageDetailsHeader() {
     };
 
     return (
-        <section id="packageDetailsHeader" style={backgroundImageStyle}>
-            <header className="bottom-header">
-                <div className="container">
-                    <div className="row">
-                        <h1>{selectedPackage.title}</h1>
-                    </div>
-                </div>
-            </header>
-        </section>
+        <Box id="packageDetailsHeader" style={backgroundImageStyle}>
+            <Box className="bottom-header">
+                <Heading as='h1'>{selectedPackage.title}</Heading>
+            </Box>
+        </Box>
     );
 }

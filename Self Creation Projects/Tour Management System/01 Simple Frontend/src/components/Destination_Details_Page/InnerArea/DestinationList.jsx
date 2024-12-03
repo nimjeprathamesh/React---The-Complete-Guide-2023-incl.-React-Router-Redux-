@@ -1,28 +1,29 @@
-import { useDestinationContext } from '../../../store/DestinationContext.jsx';
-import { destinationsData } from '../../Dummy_Data/DestinationsData.jsx';
-import Lists from '../../UI/Lists.jsx';
+import { Box, Divider, Heading, List, ListItem } from '@chakra-ui/react';
+import { NavLink } from 'react-router-dom';
+import { useTheme } from '../../../hooks/useTheme.jsx';
 import './DestinationList.css';
 
-export default function DestinationList() {
-    const { excludeName } = useDestinationContext();
+export default function DestinationList({destinations, excludeName}) {
+    const {isDark} = useTheme();
+    const borderColor = isDark ? 'lightBorder' : 'darkBorder';
 
     return (
-        <div className="desti-list">
-            <h6>NEXT DESTINATION</h6>
-            <hr className="hr-1"></hr>
-            <hr className="hr-2"></hr>
-            <ul>
-                {destinationsData
+        <Box className="desti-list">
+            <Heading as='h6' fontSize='1rem'>NEXT DESTINATION</Heading>
+            <Divider className='hr-1' />
+            <Divider className='hr-2' />
+            <List className={borderColor}>
+                {destinations
                     .filter((destination) => destination.name !== excludeName)
                     .map((destination) => (
-                        <Lists
-                            key={destination.id}
-                            to={`../destination/${destination.id}`}
-                            children={destination.name}
-                        />
+                        <ListItem key={destination.id} className={borderColor}>
+                            <NavLink to={`../destination/${destination.id}`}>
+                                {destination.name}
+                            </NavLink>
+                        </ListItem>
                     )
                 )}
-            </ul>
-        </div>
+            </List>
+        </Box>
     );
 }

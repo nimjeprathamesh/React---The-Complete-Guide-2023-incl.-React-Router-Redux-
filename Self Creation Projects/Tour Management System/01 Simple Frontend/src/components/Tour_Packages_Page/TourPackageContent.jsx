@@ -1,37 +1,39 @@
+import { Box, Card, CardBody, Flex, Heading, Icon, Image, Stack, Text } from '@chakra-ui/react';
+import { MdLocationPin } from "react-icons/md";
 import { Link } from 'react-router-dom';
 import { usePackageContext } from '../../store/PackagesContext';
+import { currencyFormatter } from '../../util/formatting';
 import './TourPackage.css';
 
 export default function TourPackageContent({packages}) {
     const { setExcludedName } = usePackageContext();
 
-    const handleReadMoreClick = () => {
+    function handleReadMoreClick() {
         setExcludedName(packages.title);
     };
 
     return (
-        <div className="col-xxl-4 col-xl-4 col-lg-4 col-md-6 col-sm-12 col-xs-12 col-12">
-            <Link to={`../package/${packages.id}`} onClick={handleReadMoreClick}>
-                <div className="inner-box" id="adventour">
-                    <div className="inner-image-overlay">
-                        <img src={packages.image} alt='Tour Package' />
-                        <div className="inner-overlay">
-                            
-                        </div>
-                    </div>
-                    <div className="caption-1">{packages.title}</div>
-                    <div className="caption-2">
-                        <i className="fas fa-map-marker-alt" id="map"></i> {packages.location}
-                    </div>
-                    <div className="para">
-                        {packages.details}
-                    </div>
-                    <div className="timeprice">
-                        <div className="time">{packages.duration}</div>
-                        <div className="price">$ {packages.price}</div>
-                    </div>
-                </div>
-            </Link>
-        </div>
+        <Link to={`../package/${packages.id}`} onClick={handleReadMoreClick}>
+            <Card maxW='sm' className='inner-box' p={0} overflow='hidden'>
+                <CardBody p={0} overflow='hidden'>
+                    <Box className="inner-image-overlay">
+                        <Image src={packages.image} borderTopRadius='lg' />
+                        <Box className="inner-overlay"></Box>
+                    </Box>
+                    <Stack p={4} spacing='3'>
+                        <Heading size='md' className='heading' m={0}>{packages.title}</Heading>
+                        <Text m={0}>
+                            <Icon as={MdLocationPin} position='relative' bottom='0.1rem' color='#f41844' />
+                            {packages.location}
+                        </Text>
+                        <Text className="para">{packages.details}</Text>
+                        <Flex justifyContent='space-between'>
+                            <Text>{packages.duration}</Text>
+                            <Text>{currencyFormatter.format(packages.price)}</Text>
+                        </Flex>
+                    </Stack>
+                </CardBody>
+            </Card>
+        </Link>
     );
 }
