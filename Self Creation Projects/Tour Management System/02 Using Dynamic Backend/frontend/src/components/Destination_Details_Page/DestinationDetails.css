@@ -1,50 +1,17 @@
 #destinationDetailsPage{
 	position: relative;
 	overflow: visible;
-	background-color: #fff;
-	margin-right: 3%;
-}
-@media only screen and (max-width: 1023px) {
-	#destinationDetailsPage {
-		margin: 0 3% 65% 0;
-	}
-}
-@media only screen and (max-width: 767px) {
-	#destinationDetailsPage {
-		margin: 25 5% 80% 0;
-	}
-}
-@media only screen and (max-width: 424px) {
-	#destinationDetailsPage {
-		margin: 0 3% 85% 0;
-	}
-}
-@media only screen and (max-width: 374px) {
-	#destinationDetailsPage {
-		margin: 39% 5% 95% 0;
-	}
 }
 #destinationDetailsPage .inner-area{
     margin: 0 3% 0 3%;
     border-radius: 10px;
-	padding: 3% 0 2% 2%;
+	padding: 1rem 2.5rem;
     position: relative;
     top: -4em;
-    background-color: #fff;
-}
-@media only screen and (min-width: 768px) and (max-width: 1023px) {
-	#destinationDetailsPage .inner-area{
-		padding: 3% 2% 2% 2%;
-	}
-}
-@media only screen and (max-width: 767px) {
-	#destinationDetailsPage .inner-area{
-		padding: 5% 2% 2% 2%;
-		margin: 0 3% 0 5%;
-	}
 }
 #destinationDetailsPage .inner-box-1{
-	padding: 0.5% 3% 0 2% !important;
+	width: 25%;
+	margin: 1rem 0;
 	-webkit-animation: bounceInUp 1s forwards;
 	animation: bounceInUp 1s both;
 	animation-delay: 0s;

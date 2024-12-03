@@ -1,36 +1,48 @@
+import { Box, Flex, Image, Text } from "@chakra-ui/react";
 import 'bootstrap/dist/css/bootstrap.min.css';
 import 'slick-carousel/slick/slick';
 import 'slick-carousel/slick/slick-theme.css';
 import 'slick-carousel/slick/slick.css';
+import { BACKEND_URL } from '../../../util/constant.jsx';
 import './Testimonial.css';
-export default function TestimonialContent({imgSrc, feedBack, name, designation}) {
+
+export default function TestimonialContent({testimonial}) {
     return (
-        <div className="col-xxl-6 col-xl-6 col-lg-6 col-md-12 col-sm-12 col-xs-12 col-12 ts-slide">
-            <div className="testimonial-slide">
-                <div className="testimonial_box">
-                    <div className="testimonial_box-inner">
-                        <div className="testimonial_box-top">
-                            <div className="row slides">
-                                <div className="col-xl-3 col-lg-3 col-md-3 col-sm-12 col-xs-12 col-12 p-0">
-                                    <img src={imgSrc} className="ts-img-1" alt="Testimonial" />
-                                </div>
-                                <div className="col-xl-9 col-lg-9 col-md-9 col-sm-12 col-xs-12 col-12">
-                                    <p className="para">{feedBack}</p>
-                                </div>
-                                <div className="row ts-bottom-row">
-                                    <div className="col-xl-6 col-lg-6 col-md-6 col-sm-12 col-xs-12 col-12">
-                                        <img src="images/photo.jpg" className="ts-img-2" alt="User" />
-                                        <b className="ts-text-1">{name}</b>
-                                    </div>
-                                    <div className="col-xl-6 col-lg-6 col-md-6 col-sm-6 col-xs-6 col-6">
-                                        <b className="ts-text-2">{designation}</b>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
+        <Box className='ts-slide'>
+            <Box className="testimonial-slide">
+                <Box className="testimonial_box">
+                    <Box className="testimonial_box-inner">
+                        <Box className="testimonial_box-top">
+                            <Flex className="slides" direction={{ base: 'column', md: 'row' }}>
+                                <Flex justifyContent='space-between' gap={5}>
+                                    <Box>
+                                        <Image src={BACKEND_URL + testimonial.image} className="ts-img-1" alt="Testimonial" />
+                                    </Box>
+                                    <Flex direction='column' justifyContent='space-between' gap={10}>
+                                        <Text className="para">{testimonial.feedBack}</Text>
+                                        <Flex justifyContent='space-between'>
+                                            <Flex justifyContent='space-between'>
+                                                <Image
+                                                    src={require("../../../images/photo.jpg")}
+                                                    alt="User"
+                                                    mr={4}
+                                                    height='2.5rem'
+                                                />
+                                                <Text className="name" mt={2} fontWeight="700">
+                                                    {testimonial.name}
+                                                </Text>
+                                            </Flex>
+                                            <Text fontWeight="bold" mt={2}>
+                                                {testimonial.designation}
+                                            </Text>
+                                        </Flex>
+                                    </Flex>
+                                </Flex>
+                            </Flex>
+                        </Box>
+                    </Box>
+                </Box>
+            </Box>
+        </Box>
     );
 }

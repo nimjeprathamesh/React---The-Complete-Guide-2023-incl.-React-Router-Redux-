@@ -1,42 +1,30 @@
-import useHttp from '../../hooks/useHttp.jsx';
-import Error from '../UI/Error/Error.jsx';
+import { Box, Flex } from '@chakra-ui/react';
+import { useLoaderData } from 'react-router-dom';
+import { useTheme } from '../../hooks/useTheme.jsx';
 import './TourPackage.css';
 import TourPackageContent from './TourPackageContent.jsx';
-import TourPackageHeader from './TourPackageHeader/TourPackageHeader';
-
-const requestConfig = {};
+import TourPackageHeader from './TourPackageHeader/TourPackageHeader.jsx';
 
 export default function TourPackage() {
-    const {
-        data: packagesData,
-        isLoading,
-        error
-    } = useHttp('http://localhost:3000/packages', requestConfig, []);
+    const {packages} = useLoaderData();
+    const {themeCss} = useTheme();
 
     return (
-        <>
+        <Box>
             <TourPackageHeader />
-            <section id="tour_page">
-                <div className="row inner-area">
-                    {isLoading && (<p className="center">Fetching tour packages...</p>)}
-                    {error && (<Error message='Failed to fetch tour packages.' />)}
-                    {!packagesData && (<Error message='No tour packages found.' />)}
-                    {!error && (
-                        packagesData.map((packages) => (
-                            <TourPackageContent
-                                key={packages.id}
-                                id={packages.id}
-                                imgSrc={`http://localhost:3000/${packages.image}`}
-                                title={packages.title}
-                                location={packages.location}
-                                details={packages.details}
-                                duration={packages.duration}
-                                price={packages.price}
-                            />
-                        )
+            <Box id="tour_page">
+                <Flex
+                    wrap="wrap"
+                    justifyContent="space-between"
+                    flex='1 1 calc(33.33% - 1rem)'
+                    className="inner-area"
+                    style={themeCss}
+                >
+                    {packages.map((packages) => (
+                        <TourPackageContent key={packages.id} packages={packages} />
                     ))}
-                </div>
-            </section>
-        </>
+                </Flex>
+            </Box>
+        </Box>
     );
 }

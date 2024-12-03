@@ -1,34 +1,50 @@
-import React, { useEffect, useRef, useState } from 'react';
-import Modal from "../components/UI/Modal/Modal";
+import { useDisclosure } from '@chakra-ui/react';
+import React, { useRef } from 'react';
+import Modal from "../components/UI/Modal/Modal.jsx";
+import { BACKEND_URL } from '../util/constant.jsx';
 
 export default function useInput({successMsg}) {
     const formRef = useRef(null);
-    const [isModalOpen, setIsModalOpen] = useState(false);
+    const { isOpen, onOpen, onClose } = useDisclosure();
 
-    useEffect(() => {
-        return () => {
-            setIsModalOpen(false);
-        };
-    }, [isModalOpen]);
+    async function handleSubmit(event, request) {
+        event.preventDefault();
+
+        const formData = await request.formData();
+        const postData = Object.fromEntries(formData);
+        console.log(postData);
+        let endpoint = BACKEND_URL + 'contactInfo';
+
+        if ('mail' in postData && Object.keys(postData).length === 1) {
+            endpoint = BACKEND_URL + 'subscription';
+        }
+
+        const response = await fetch(endpoint, {
+            method: 'POST',
+            body: JSON.stringify(postData),
+            headers: {
+                'Content-Type': 'application/json',
+            },
+        });
+
+        if(response.ok) {
+            onOpen();
+        }
+
+        if (formRef.current) {
+            formRef.current.reset();
+        }
+    }
 
     const dialogBox = (
-        <Modal open={isModalOpen}>
-            <h1>
-                <div className="success-checkmark">
-                    <div className="check-icon">
-                        <span className="icon-line line-tip"></span>
-                        <span className="icon-line line-long"></span>
-                        <div className="icon-circle"></div>
-                        <div className="icon-fix"></div>
-                    </div>
-                </div>
-            </h1>
-            <h3>Good Job!</h3>
-            <p>{successMsg}</p>
-        </Modal>
+        <Modal
+            isOpen={isOpen}
+            message={successMsg}
+            onConfirm={onClose}
+        />
     );
 
     return {
-        formRef, setIsModalOpen, dialogBox,
+        formRef, handleSubmit, dialogBox,
     };
 };

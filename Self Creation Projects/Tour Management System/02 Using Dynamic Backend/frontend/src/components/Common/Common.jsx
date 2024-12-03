@@ -1,15 +1,18 @@
-import { Outlet } from "react-router-dom";
+import { Box } from "@chakra-ui/react";
+import { Outlet, useLoaderData } from "react-router-dom";
 import Footer from "./Footer/Footer";
 import Header from "./Header/Header";
 
 export default function Common() {
+    const { destinations, packages } = useLoaderData();
+
     return (
-        <>
+        <Box >
             <Header />
-            <main>
+            <Box as="main">
                 <Outlet />
-            </main>
-            <Footer />
-        </>
+            </Box>
+            <Footer destination={destinations} packages={packages} />
+        </Box>
     );
 }

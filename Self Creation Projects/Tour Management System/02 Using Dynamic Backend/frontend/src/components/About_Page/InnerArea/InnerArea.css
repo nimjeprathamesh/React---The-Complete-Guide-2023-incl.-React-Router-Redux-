@@ -2,15 +2,10 @@
 	margin-bottom: 10px;
     margin: 0 2em;
     border-radius: 10px;
-    padding: 3%;
+    padding: 2rem 2.5rem;
     position: relative;
-    top: -4em;
+    top: -1em;
     background-color: #fff;
-}
-@media only screen and (min-width: 375px) and (max-width: 1023px) {
-	#description_page .description_area{
-		top: -3em;
-	}
 }
 #description_page .inner-box{
 	-webkit-animation: zoomIn 1s forwards;
@@ -43,7 +38,6 @@
 	text-align: left;
 	font-size: 17px;
 	font-weight: 400;
-	color: #000;
 }
 #description_page ul li{
 	list-style-type: none;

@@ -1,3 +1,4 @@
+import { useLoaderData } from "react-router-dom";
 import AboutUs from "./AboutUs/AboutUs.jsx";
 import Banner from "./Banner/Banner.jsx";
 import Destination from "./Destination/Destination.jsx";
@@ -8,14 +9,16 @@ import Slide from "./Slider/Slider.jsx";
 import Testimonial from "./Testimonial/Testimonial.jsx";
 
 export default function Home() {
+    const { destinations, packages, testimonials, memberships } = useLoaderData();
+    
     return (
         <>
             <Slide />
-            <Destination />
+            <Destination destinations={destinations} />
             <Banner />
-            <Packages />
-            <Testimonial />
-            <Membership />
+            <Packages packages={packages} />
+            <Testimonial testimonials={testimonials} />
+            <Membership memberships={memberships} />
             <AboutUs />
             <NewsLetter />
         </>

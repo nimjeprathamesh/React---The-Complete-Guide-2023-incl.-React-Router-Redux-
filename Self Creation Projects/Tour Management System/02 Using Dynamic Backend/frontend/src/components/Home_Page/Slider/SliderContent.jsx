@@ -1,29 +1,31 @@
+import { Box, Button, Heading, Link, Text } from '@chakra-ui/react';
 import React from 'react';
-import { Link } from 'react-router-dom';
 import './Slider.css';
 
-export default function SliderContent({imgSrc, description, title}) {
+export default function SliderContent({ imgSrc, description, title }) {
     const backgroundImageStyle = {
         backgroundImage: `url(${imgSrc})`,
+        backgroundSize: 'cover',
+        backgroundPosition: 'center',
     };
 
     return (
-            <div className='slider-inner' style={backgroundImageStyle}>
-                <div className="container">
-                    <div className="slider-content">
-                        <div className="slide-text">
-                            <p>{description}</p>
-                        </div>
-                        <div className="slide-title">
-                            <h2>{title}</h2>
-                        </div>
-                        <div className="slide-btns">
-                            <Link to='/contact-us' className="theme-btn-s2">
-                                Contact Us
-                            </Link>
-                        </div>
-                    </div>
-                </div>
-            </div>
+        <Box
+            style={backgroundImageStyle}
+            height="92vh"
+            display="flex"
+            alignItems="center"
+            justifyContent="center"
+            textAlign="center"
+            color="white"
+        >
+            <Box>
+                <Text mb={5}>{description}</Text>
+                <Heading as='h1' fontSize='6rem' mb={5}>{title}</Heading>
+                <Link href='/contact-us'>
+                    <Button className="theme-btn-s2">Contact Us</Button>
+                </Link>
+            </Box>
+        </Box>
     );
 }

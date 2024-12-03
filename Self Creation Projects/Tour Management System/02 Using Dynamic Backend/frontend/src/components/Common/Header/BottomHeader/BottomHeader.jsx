@@ -1,49 +1,33 @@
+import { Box, Flex, HStack, Icon, Img, List, ListItem } from '@chakra-ui/react';
 import React from 'react';
-import { useLocation } from 'react-router-dom';
-import { menuItem } from '../../../MenuItem';
-import Lists from '../../../UI/Lists';
+import { NavLink } from 'react-router-dom';
+import ToggleTheme from '../../../ToggleTheme.jsx';
+import { menuItem } from '../../MenuItem.jsx';
 import './BottomHeader.css';
 
 export default function BottomHeader() {
-    const location = useLocation();
-    const isDestinationDetailsPage = location.pathname.includes("/destination-details");
-    const pathname = isDestinationDetailsPage ? '../images/logo.png' : '/images/logo.png';
-
-    function openNav() {
-        document.getElementById("mySidenav").classList.add("activenav");
-        document.getElementById("mySidenav").classList.remove("closenavbar");
-    }
-    
-    function closeNav() {
-        document.getElementById("mySidenav").classList.remove("activenav");
-        document.getElementById("mySidenav").classList.add("closenavbar");
-    }
-
     return (
-        <header id="bottom-header">
-            <div className="row navbar">
-                <div className="col-xxl-6 col-xl-5 col-lg-4 col-md-3 col-sm-3 col-xs-3 col-3">
-                    <img src={pathname} alt='It is a logo.' />
-                </div>
-                <div className="col-xxl-6 col-xl-7 col-lg-8 col-md-9 col-sm-9 col-xs-3 col-9">
-                    <nav className="navbar navbar-expand-md">
-                        <div id="mySidenav" className="sidenav">
-                            <button className="closebtn" onClick={closeNav}>&times;</button>
-                            <ul className="navbar-nav">
-                                {menuItem.map((item, index) => (
-                                    <Lists
-                                        key={index}
-                                        to={item.to}
-                                        children={item.name}
-                                        className={({isActive}) => isActive ? 'activeBottomHeader' : undefined}
-                                    />
-                                ))}
-                            </ul>
-                        </div>
-                    </nav>
-                    <span className="openNav" onClick={openNav}>&#9776;</span>
-                </div>
-            </div>
-        </header>
+        <Box id="bottom-header" p={2}>
+            <Flex justifyContent='space-between' flex="1 0 calc(33.33% - 1rem)" gap='7rem'>
+                <Img src={require('../../../../images/logo.png')} alt='It is a logo.' />
+                <HStack>
+                    {menuItem.map((item, index) => (
+                        <List key={index} m={0} p={0}>
+                            <ListItem>
+                                <NavLink
+                                    to={item.to}
+                                    className={({isActive}) => (
+                                        isActive ? 'activeBottomHeader' : undefined
+                                    )}
+                                >
+                                    <Icon position='relative' bottom='0.1rem' as={item.icon} /> {item.name}
+                                </NavLink>
+                            </ListItem>
+                        </List>
+                    ))}
+                </HStack>
+                <ToggleTheme />
+            </Flex>
+        </Box>
     );
 }

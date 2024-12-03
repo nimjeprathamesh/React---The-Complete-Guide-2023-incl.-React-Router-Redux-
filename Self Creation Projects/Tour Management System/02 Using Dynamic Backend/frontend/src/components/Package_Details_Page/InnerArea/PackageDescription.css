@@ -1,31 +1,5 @@
 #packageDetailsPage h5{
-	text-align: left;
-	float: left;
-}
-@media only screen and (min-width: 425px) and (max-width: 767px) {
-	#packageDetailsPage h5{
-		font-size: 17px;
-	}
-}
-@media only screen and (min-width: 375px) and (max-width: 424px) {
-	#packageDetailsPage h5{
-		font-size: 15px;
-	}
-}
-@media only screen and (max-width: 374px) {
-	#packageDetailsPage h5{
-		font-size: 13px;
-	}
-}
-#packageDetailsPage img{
-	width: 100%;
-	height: auto;
-	display: block;
-	margin: 0 auto 30px auto;
-}
-#packageDetailsPage .caption{
-	color: #a0a0a0;
-	margin-bottom: 20px;
+	font-size: 20px;
 }
 #packageDetailsPage .caption i{
 	color: #ff1944;
@@ -39,21 +13,7 @@
 #packageDetailsPage .timeprice{
     font-size: 17px;
 	text-align: center;
-}
-@media only screen and (min-width: 425px) and (max-width: 767px) {
-	#packageDetailsPage .timeprice{
-		font-size: 15px;
-	}
-}
-@media only screen and (min-width: 375px) and (max-width: 424px) {
-	#packageDetailsPage .timeprice{
-		font-size: 13px;
-	}
-}
-@media only screen and (max-width: 374px) {
-	#packageDetailsPage .timeprice{
-		font-size: 11px;
-	}
+	margin: 0;
 }
 #packageDetailsPage .timeprice span{
     color: #ff1944;

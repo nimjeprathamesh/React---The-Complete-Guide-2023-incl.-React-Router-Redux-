@@ -1,15 +1,12 @@
+import { Box, Heading } from '@chakra-ui/react';
 import './AboutHeader.css';
 
 export default function AboutHeader() {
     return (
-        <section id="About_header">
-            <header className="bottom-header">
-                <div className="container">
-                    <div className="row">
-                        <h1>About</h1>
-                    </div>
-                </div>
-            </header>
-        </section>
+        <Box id="About_header">
+            <Box className="bottom-header">
+                <Heading as='h1'>About</Heading>
+            </Box>
+        </Box>
     );
 }

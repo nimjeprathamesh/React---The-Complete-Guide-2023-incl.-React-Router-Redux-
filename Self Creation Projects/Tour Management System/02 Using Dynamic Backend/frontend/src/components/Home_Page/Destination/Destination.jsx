@@ -1,45 +1,31 @@
+import { Box, Button, Flex, Heading, Icon, Text } from '@chakra-ui/react';
 import React from 'react';
+import { FiEye } from 'react-icons/fi';
 import { Link } from 'react-router-dom';
-import useHttp from '../../../hooks/useHttp.jsx';
-import Error from '../../UI/Error/Error.jsx';
+import { useTheme } from '../../../hooks/useTheme.jsx';
 import './Destination.css';
 import DestinationContent from './DestinationContent.jsx';
 
-const requestConfig = {};
-
-export default function Destination() {
-    const {data: destinationsData, isLoading, error} = useHttp(
-        'http://localhost:3000/destinations',
-        requestConfig, []
-    );
-    const limitedDestinations = destinationsData.slice(0, 4);
+export default function Destination({destinations}) {
+    const limitedDestinations = destinations.slice(0, 4);
+    const {isDark} = useTheme();
+    const buttonHoverClass = isDark ? 'service-1-area-btn-dark' : 'service-1-area-btn-light';
 
     return (
-        <section id="homePageDestination">
-            <div className="row">
-                <h1><span>Top</span> Destinations</h1>
-            </div>
-            <div className="row service-1-area">
-                {isLoading && (<p className="center">Fetching destinations...</p>)}
-                {!destinationsData && (<Error message='No destinations found.' />)}
-                {error && (<Error message='Failed to fetch destinations.' />)}
-                {!error && (
-                    limitedDestinations.map((destination, index) => (
-                        <DestinationContent
-                            key={index}
-                            id={destination.id}
-                            imgSrc={`http://localhost:3000/${destination.image}`}
-                            name={destination.name}
-                            duration={destination.duration}
-                        />
-                    )
+        <Box id="homePageDestination">
+            <Heading as="h1" size="xl">
+                <Text as='span' fontWeight='bold'>Top</Text> Destinations
+            </Heading>
+            <Flex wrap="wrap" justifyContent="space-between" flex='1 1 calc(25% - 1rem)' margin='4rem 1rem'>
+                {limitedDestinations.map((destination) => (
+                    <DestinationContent key={destination.id} destination={destination} />
                 ))}
-            </div>
-            <div className="row">
-                <Link to='/destination' className="service-1-area-btn">
-                    VIEW ALL DESTINATION
-                </Link>
-            </div>
-        </section>
+            </Flex>
+            <Link to='/destination'>
+                <Button className={`service-1-area-btn ${buttonHoverClass}`}>
+                    <Icon marginRight='0.5rem' as={FiEye} />VIEW ALL DESTINATION
+                </Button>
+            </Link>
+        </Box>
     )
 }

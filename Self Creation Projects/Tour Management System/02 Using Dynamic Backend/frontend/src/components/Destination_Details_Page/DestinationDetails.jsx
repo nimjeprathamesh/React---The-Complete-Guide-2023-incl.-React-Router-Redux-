@@ -1,41 +1,32 @@
-import React, { useEffect, useState } from 'react';
-import { useLocation } from 'react-router-dom';
+import { Box, Flex } from '@chakra-ui/react';
+import React from 'react';
+import { useLoaderData } from 'react-router-dom';
+import { useTheme } from '../../hooks/useTheme.jsx';
+import { useDestinationContext } from '../../store/DestinationContext.jsx';
+import '../Inquiry_Form/DestinationInquiryForm.css';
+import InquiryForm from '../Inquiry_Form/InquiryForm.jsx';
 import './DestinationDetails.css';
 import DestinationDetailsHeader from './DestinationDetailsHeader/DestinationDetailsHeader.jsx';
 import DestinationDescription from './InnerArea/DestinationDescription.jsx';
 import DestinationList from './InnerArea/DestinationList.jsx';
-import InquiryForm from './InnerArea/InquiryForm.jsx';
 
 export default function DestinationDetails() {
-    const location = useLocation();
-    const excludeName = location.state?.excludeName;
-    const [initialLoad, setInitialLoad] = useState(true);
-
-    useEffect(() => {
-        const storedExcludeName = localStorage.getItem('excludeName');
-        if (initialLoad) {
-            if (!storedExcludeName || storedExcludeName !== excludeName) {
-                localStorage.setItem('excludeName', excludeName || '');
-            }
-            setInitialLoad(false);
-        }
-    }, [excludeName, initialLoad]);
+    const {destination, destinations} = useLoaderData();
+    const { initialLoad, excludeName } = useDestinationContext();
+    const {themeCss} = useTheme();
 
     return (
-        <>
-            <DestinationDetailsHeader />
-            <section id="destinationDetailsPage">
-                <div className="row inner-area">
-                    <DestinationDescription />
-                    <div className="col-xxl-3 col-xl-3 col-lg-3 col-md-12 col-sm-12 col-xs-12 col-12 p-0 inner-box-1">
-                        <h6>INQUIRY FORM</h6>
-                        <hr className="hr-1"></hr>
-                        <hr className="hr-2"></hr>
+        <Box>
+            <DestinationDetailsHeader destinations={destination} />
+            <Box id="destinationDetailsPage">
+                <Flex className="inner-area" style={themeCss} justifyContent='space-between'>
+                    <DestinationDescription destinations={destination} />
+                    <Box className='inner-box-1'>
                         <InquiryForm />
-                        {!initialLoad && <DestinationList excludeName={excludeName} />}
-                    </div>
-                </div>
-            </section>
-        </>
+                        {!initialLoad && <DestinationList excludeName={excludeName} destinations={destinations} />}
+                    </Box>
+                </Flex>
+            </Box>
+        </Box>
     );
 }

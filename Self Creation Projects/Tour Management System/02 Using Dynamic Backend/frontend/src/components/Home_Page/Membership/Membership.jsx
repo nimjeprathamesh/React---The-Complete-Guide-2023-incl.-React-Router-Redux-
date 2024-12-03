@@ -1,38 +1,18 @@
-import useHttp from '../../../hooks/useHttp.jsx';
-import Error from '../../UI/Error/Error.jsx';
+import { Box, Flex, Heading, Text } from '@chakra-ui/react';
 import './Membership.css';
 import MembershipContent from './MembershipContent.jsx';
 
-const requestConfig = {};
-
-export default function Membership() {
-    const {
-        data: membershipData,
-        isLoading,
-        error
-    } = useHttp('http://localhost:3000/memberships', requestConfig, []);
-
+export default function Membership({memberships}) {
     return (
-        <section id="homePageMember">
-			<div className="row">
-				<h1><b>Our</b> Membership</h1>
-			</div>
-			<div className="row member-area">
-                {isLoading && (<p className="center">Fetching memberships...</p>)}
-                {!membershipData && (<Error message='No memberships found.' />)}
-                {error && (<Error message='Failed to fetch memberships.' />)}
-                {!error && (
-                    membershipData.map((membership, index) => (
-                        <MembershipContent
-                            key={index}
-                            imgSrc={`http://localhost:3000/${membership.image}`}
-                            type={membership.type}
-                            location={membership.location}
-                            price={membership.price}
-                        />
-                    )
+        <Box id="homePageMember">
+            <Heading as="h1" size="xl">
+                <Text as='span' fontWeight='bold'>Our</Text> Membership
+            </Heading>
+            <Flex wrap="wrap" justifyContent="space-between" flex='1 1 calc(33.33% - 1rem)' margin='5rem 4rem'>
+                {memberships.map((membership, index) => (
+                    <MembershipContent key={index} membership={membership} />
                 ))}
-			</div>
-		</section>
+            </Flex>
+        </Box>
     );
 }

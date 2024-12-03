@@ -1,15 +1,15 @@
 #footer{
 	position: absolute;
 	overflow: hidden;
+	color: #606060;
 }
 #footer .upperfooter{
-	background-color: #2a2a2a;
 	padding: 3%;
+	background-color: #2A2A2A;
 }
 #footer .phone{
-	color: #606060;
 	font-size: 15px;
-	margin-top: 6%;
+	margin-top: 4%;
 	text-align: center;
 	font-weight: 500;
 	-webkit-animation: fadeInRight 1s forwards;
@@ -30,12 +30,15 @@
 }
 #footer #call{
 	color: white;
-	margin-right: 3%;
+	transform: rotate(270deg);
+    position: relative;
+    bottom: 0.2rem;
+    right: 0.4rem;
 }
 #footer .mail{
 	font-size: 15px;
 	cursor: pointer;
-	margin-top: 6%;
+	margin: 1.3rem 0 0 2rem;
 	text-align: center;
 	font-weight: 500;
 	-webkit-animation: fadeInRight 1s forwards;
@@ -54,18 +57,7 @@
 	    transform: translateX(0);
 	}
 }
-@media only screen and (min-width: 1024px) and (max-width: 1320px) {
-	#footer .mail{
-		text-align: left;
-	}
-}
-@media only screen and (min-width: 768px) and (max-width: 1023px) {
-	#footer .mail{
-		margin-top: 6%;
-	}
-}
 #footer .mail a{
-	color: #606060;
 	text-decoration: none;
 }
 #footer .mail a:hover{
@@ -77,8 +69,7 @@
 }
 #footer .connect{
 	font-size: 40px;
-	float: right;
-	color: #747474;
+	margin-top: 0.7rem;
 	-webkit-animation: fadeInRight 1s forwards;
 	animation: fadeInRight 1s both;
 	animation-delay: 0s;
@@ -95,25 +86,25 @@
 	    transform: translateX(0);
 	}
 }
-@media only screen and (min-width: 375px) and (max-width: 1023px) {
-	#footer .connect{
-		float: none;
-		margin-top: 2%;
-		text-align: center;
-	}
-}
 #footer .connect a{
 	text-decoration: none;
-	color: #747474;
 }
-#footer #upperfooter-icon{
-	margin-right: 20px;
-	cursor: pointer;
+#footer .connect i{
+    font-size: 25px;
+	padding: 0.5rem 0.8rem;
+    margin-left: 1rem;
+    border-radius: 40px;
+	background-color: #363636;
 	transition-duration: 1s;
 	transition: transform .9s;
 }
-#footer #upperfooter-icon:hover{
-	color: #f41844;
+#footer .connect #socialMedia {
+	position: relative;
+    bottom: 0.2rem;
+}
+#footer .connect i:hover{
+	color: #fff;
+	background-color: #f41844;
 	-ms-transform: scale(1.3); /* IE 9 */
 	-webkit-transform: scale(1.3); /* Safari 3-8 */
 	transform: scale(1.3);

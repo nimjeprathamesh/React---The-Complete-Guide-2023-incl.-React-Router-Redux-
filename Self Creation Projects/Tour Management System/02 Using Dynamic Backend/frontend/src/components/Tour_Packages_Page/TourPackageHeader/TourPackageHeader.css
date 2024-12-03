@@ -1,31 +1,17 @@
 #tourPackageHeader{
     position: relative;
     overflow: visible;
-    background-image: url('/public/images/mountain.jpg');
+    background-image: url('../../../images/mountain.jpg');
     background-repeat: no-repeat;
     background-size: cover;
     background-attachment: fixed;
     padding-bottom: 22%;
-}
-@media only screen and (max-width: 1023px) {
-	#tourPackageHeader{
-		background-image: none;
-	}
 }
 #tourPackageHeader .bottom-header{
 	position: absolute;
 	overflow: visible;
 	background: transparent;
 	width: 100%;
-}
-@media only screen and (max-width: 1023px) {
-	#tourPackageHeader .bottom-header{
-		background-image: url('/public/images/mountain.jpg');
-		background-repeat: no-repeat;
-		background-size: cover;
-		background-attachment: fixed;
-		padding-bottom: 18%;
-	}
 }
 #tourPackageHeader .bottom-header h1{
 	color: #000;
@@ -46,26 +32,8 @@
 		transform: scale(1);
 	}
 }
-@media only screen and (min-width: 375px) and (max-width: 1023px) {
-	#header .bottom-header h1{
-		margin-top: 10%;
-	}
-}
-@media only screen and (max-width: 374px) {
-	#header .bottom-header h1{
-		margin-top: 15%;
-	}
-}
 #bottom-header .active_tout_package{
 	color: #f41844;
     border: 2px solid;
     border-radius: 5px;
-}
-@media only screen and (max-width: 1023px) {
-	#bottom-header .active_tout_package{
-		color: #fff !important;
-		background-color: #f41844;
-		border-radius: 5px;
-		border: none;
-	}
 }

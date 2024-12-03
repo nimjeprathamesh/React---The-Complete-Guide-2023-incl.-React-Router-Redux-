@@ -1,22 +1,31 @@
+import { Box, Card, CardBody, Flex, Heading, Icon, Image, Stack, Text } from '@chakra-ui/react';
+import { MdLocationPin } from "react-icons/md";
+import { BACKEND_URL } from '../../../util/constant.jsx';
+import { currencyFormatter } from '../../../util/formatting.jsx';
 import './Membership.css';
 
-export default function MembershipContent({imgSrc, type, location, price}) {
+export default function MembershipContent({membership}) {
     return (
-        <div className="col-xl-4 col-lg-4 col-md-6 col-sm-12 col-xs-12 col-12">
-            <div className="member-box">
-                <div className="member-image-overlay">
-                    <img src={imgSrc} alt='Membership' />
-                    <div className="member-overlay">
-
-                    </div>
-                </div>
-                <figcaption><b className="caption-1">{type}</b></figcaption>
-                <figcaption>
-                    <i className="fas fa-map-marker-alt" id="placeprice"></i>
-                    <div className="caption-2">{location}</div>
-                    <div className="price">from-<span>${price}</span></div>
-                </figcaption>
-            </div>
-        </div>
+        <Card maxW='sm' className='member-box'>
+            <CardBody p={0}>
+                <Box className="member-image-overlay">
+                    <Image src={BACKEND_URL + membership.image} alt='Membership' />
+                    <Box className="member-overlay"></Box>
+                </Box>
+                <Stack spacing='3' p={4}>
+                    <Heading size='md' className='type' m={0}>{membership.type}</Heading>
+                    <Flex justifyContent='space-between'>
+                        <Text className="caption-2">
+                            <Icon mr={1} mb={1} color='#f41844' as={MdLocationPin} />
+                            {membership.location}
+                        </Text>
+                        <Text className="price">
+                            from-
+                            <Text as='span' fontWeight='500'>{currencyFormatter.format(membership.price)}</Text>
+                        </Text>
+                    </Flex>
+                </Stack>
+            </CardBody>
+        </Card>
     );
 }

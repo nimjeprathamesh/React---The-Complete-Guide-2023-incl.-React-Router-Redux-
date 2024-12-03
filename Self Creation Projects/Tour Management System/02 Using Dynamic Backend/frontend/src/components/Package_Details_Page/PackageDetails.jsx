@@ -1,38 +1,32 @@
-import React, { useEffect, useState } from 'react';
-import { useLocation } from 'react-router-dom';
-import InquiryForm from './InnerArea/InquiryForm.jsx';
+import { Box, Flex } from '@chakra-ui/react';
+import React from 'react';
+import { useLoaderData } from 'react-router-dom';
+import { useTheme } from '../../hooks/useTheme.jsx';
+import { usePackageContext } from '../../store/PackagesContext.jsx';
+import InquiryForm from '../Inquiry_Form/InquiryForm.jsx';
+import '../Inquiry_Form/PackageInquiryForm.css';
 import PackageDescription from './InnerArea/PackageDescription';
 import PackageList from './InnerArea/PackageList';
 import './PackageDetails.css';
 import PackageDetailsHeader from './PackageDetailsHeader/PackageDetailsHeader';
 
 export default function PackageDetails() {
-    const location = useLocation();
-    const excludeName = location.state?.excludeName;
-    const [initialLoad, setInitialLoad] = useState(true);
-
-    useEffect(() => {
-        const storedExcludeName = localStorage.getItem('excludeName');
-        if (initialLoad) {
-            if (!storedExcludeName || storedExcludeName !== excludeName) {
-                localStorage.setItem('excludeName', excludeName || '');
-            }
-            setInitialLoad(false);
-        }
-    }, [excludeName, initialLoad]);
+    const {tourPackage, packages} = useLoaderData();
+    const {initialLoad, excludeName} = usePackageContext;
+    const {themeCss} = useTheme();
 
     return (
-        <>
-            <PackageDetailsHeader />
-            <section id="packageDetailsPage">
-                <div className="row inner-area">
-                    <PackageDescription />
-                    <div className="col-xxl-3 col-xl-3 col-lg-3 col-md-12 col-sm-12 col-xs-12 col-12 p-0 inner-box-1">
+        <Box>
+            <PackageDetailsHeader packages={tourPackage} />
+            <Box id="packageDetailsPage">
+                <Flex className="inner-area" style={themeCss} justifyContent='space-between'>
+                    <PackageDescription packages={tourPackage} />
+                    <Box className='inner-box-1'>
                         <InquiryForm />
-                        {!initialLoad && <PackageList  excludeName={excludeName} />}
-                    </div>
-                </div>
-            </section>
-        </>
+                        {!initialLoad && <PackageList excludeName={excludeName} packages={packages} />}
+                    </Box>
+                </Flex>
+            </Box>
+        </Box>
     );
 }

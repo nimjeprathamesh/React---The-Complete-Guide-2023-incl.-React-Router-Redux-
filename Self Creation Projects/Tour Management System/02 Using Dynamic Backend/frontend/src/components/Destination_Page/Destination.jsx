@@ -1,42 +1,32 @@
+import { Box, Flex } from '@chakra-ui/react';
 import React from 'react';
-import useHttp from '../../hooks/useHttp.jsx';
-import Error from '../UI/Error/Error.jsx';
+import { useLoaderData } from 'react-router-dom';
+import { useTheme } from '../../hooks/useTheme.jsx';
 import './Destination.css';
 import DestinationContent from './DestinationContent.jsx';
 import DestinationHeader from './DestinationHeader/DestinationHeader.jsx';
 
-const requestConfig = {};
-
 export default function Destination() {
-    const {data: destinationsData, isLoading, error} = useHttp(
-        'http://localhost:3000/destinations',
-        requestConfig, []
-    );
+    const {destinations} = useLoaderData();
+    const {themeCss} = useTheme();
 
     return (
-        <>
+        <Box>
             <DestinationHeader />
-            <section id="inner-page">
-                <div className="inner-area">
-                    <div className="row">
-                        {isLoading && (<p className="center">Fetching destinations...</p>)}
-                        {error && (<Error message='Failed to fetch destinations.' />)}
-                        {!destinationsData && (<Error message='No destinations found.' />)}
-                        {!error && (
-                            destinationsData.map((destination) => (
-                                <DestinationContent
-                                    key={destination.id}
-                                    id={destination.id}
-                                    imgSrc={`http://localhost:3000/${destination.image}`}
-                                    name={destination.name}
-                                    details={destination.details}
-                                    duration={destination.duration}
-                                />
-                            )
-                        ))}
-                    </div>
-                </div>
-            </section>
-        </>
+            <Box id="inner-page">
+                <Flex
+                    wrap='wrap'
+                    justifyContent='center'
+                    flex='1 1 calc(25% - 1rem)'
+                    className="inner-area"
+                    gap={5}
+                    style={themeCss}
+                >
+                    {destinations.map((destination) => (
+                        <DestinationContent key={destination.id} destination={destination} />
+                    ))}
+                </Flex>
+            </Box>
+        </Box>
     );
 }

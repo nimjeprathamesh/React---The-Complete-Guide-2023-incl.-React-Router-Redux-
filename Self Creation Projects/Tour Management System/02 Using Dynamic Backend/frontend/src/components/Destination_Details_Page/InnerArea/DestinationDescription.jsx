@@ -1,46 +1,31 @@
+import { TimeIcon } from '@chakra-ui/icons';
+import { Box, Divider, Heading, Icon, Img, Text } from '@chakra-ui/react';
 import React from 'react';
-import { useParams } from 'react-router-dom';
-import useHttp from '../../../hooks/useHttp.jsx';
-import Error from '../../UI/Error/Error.jsx';
+import { FaRegCalendar } from "react-icons/fa";
+import { useTheme } from '../../../hooks/useTheme';
+import { BACKEND_URL } from '../../../util/constant.jsx';
 import './DestinationDescription.css';
 
-const requestConfig = {};
-
-export default function DestinationDescription() {
-    const { id } = useParams();
-    const {data: destinationsData, isLoading, error} = useHttp(
-        'http://localhost:3000/destinations',
-        requestConfig, []
-    );
-    const selectedDestination = destinationsData.find((destination) => destination.id.toString() === id);
-
-    let errorMsg;
-    if (!selectedDestination) {
-        return errorMsg = <Error message='No destination found with the provided ID.' />;
-    }
-
-    const detailsParagraphs = selectedDestination.details.split('\n');
+export default function DestinationDescription({destinations}) {
+    const {isDark} = useTheme();
+    const borderColor = isDark ? 'lightBorder' : 'darkBorder';
+    const detailsParagraphs = destinations.details.split('\n');
 
     return (
-        <>
-            {isLoading && (<p className="center">Fetching destinations...</p>)}
-            {errorMsg}
-            {!destinationsData && (<Error message='No destinations found.' />)}
-            {error && (<Error message='Failed to fetch destinations details.' />)}
-            {!error && (
-                <div className="col-xxl-9 col-xl-9 col-lg-9 col-md-12 col-sm-12 col-xs-12 col-12">
-                    <h5><i className="fa-regular fa-calendar" id="icon"></i> {selectedDestination.date}</h5>
-                    <hr></hr>
-                    <img src={`http://localhost:3000/${selectedDestination.image}`} alt='Destination Details' />
-                    <i>&#xf017;</i> {selectedDestination.duration}
-                    {detailsParagraphs.map((paragraph, index) => (
-                        <p key={index}>
-                            {index > 0}
-                            {paragraph}
-                        </p>
-                    ))}
-                </div>
-            )}
-        </>
+        <Box margin='1.2rem 0' width='72%'>
+            <Heading as='h5'>
+                <Icon as={FaRegCalendar} color='#ff1944' position='relative' mr={2} bottom='0.2rem' />
+                {destinations.date}
+            </Heading>
+            <Divider className={borderColor} m={0} />
+            <Img mt={4} src={BACKEND_URL + destinations.image} alt='Destination Details' />
+            <Text><Text as='i'><TimeIcon /></Text> {destinations.duration}</Text>
+            {detailsParagraphs.map((paragraph, index) => (
+                <Text key={index}>
+                    {index > 0}
+                    {paragraph}
+                </Text>
+            ))}
+        </Box>
     );
 }

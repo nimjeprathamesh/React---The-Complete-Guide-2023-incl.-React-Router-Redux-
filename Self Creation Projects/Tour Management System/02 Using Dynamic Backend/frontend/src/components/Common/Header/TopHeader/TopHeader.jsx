@@ -1,39 +1,41 @@
+import { Box, Button, Flex, Icon, Text } from '@chakra-ui/react';
+import { FiPhone } from 'react-icons/fi';
+import { TfiEmail } from "react-icons/tfi";
 import { Link } from 'react-router-dom';
+import { useTheme } from '../../../../hooks/useTheme.jsx';
 import './TopHeader.css';
 
 export default function TopHeader() {
-    const handlePhoneClick = () => {
-        window.open('tel:+0055566699900', '_blank');
-    };
+    const {isDark} = useTheme();
+    const buttonHoverClass = isDark ? 'header-btn-dark' : 'header-btn-light';
 
     return (
-        <header id="top-header">
-            <div className="container">
-                <div className="row header-area">
-                    <div className="col-xl-3 col-lg-3 col-md-12 col-sm-12 col-xs-12 col-12 p-0">
-                        <div className="header-text">
-                            We are a experience company. <span>Contact Us!</span>
-                        </div>
-                    </div>
-                    <div className="col-xl-3 col-lg-3 col-md-12 col-sm-12 col-xs-12 col-12 p-0">
-                        <div className="header-mail">
-                            <i className="fa-regular fa-envelope"></i> <a href="mailto:clinexmex0011@gmail.com">
-                                clinexmex0011@gmail.com
-                            </a>
-                        </div>
-                    </div>
-                    <div className="col-xl-3 col-lg-3 col-md-12 col-sm-12 col-xs-12 col-12 p-0">
-                        <div className="header-num" onClick={handlePhoneClick}>
-                            <i className="fa-solid fa-phone"></i>{''} <span>(+00) 555 666 999 00</span>
-                        </div>
-                    </div>
-                    <div className="col-xl-3 col-lg-3 col-md-12 col-sm-12 col-xs-12 col-12 p-0">
-                        <Link to='/contact-us'>
-                            <button className="header-btn">BOOK NOW</button>
-                        </Link>
-                    </div>
-                </div>
-            </div>
-        </header>
+        <Box id="top-header" margin='0 9rem'>
+            <Flex justifyContent='space-between'>
+                <Flex direction='row' mt={2}>
+                    <Text>
+                        We are a experience company.
+                        <Text as='span' ml={2} color='#f41844'>Contact Us!</Text>
+                    </Text>
+                </Flex>
+                <Text mt={2}>
+                    <Icon as={TfiEmail} color='unset' /> <Link href="mailto:clinexmex0011@gmail.com" className='mailNum'>
+                        clinexmex0011@gmail.com
+                    </Link>
+                </Text>
+                <Text mt={2}>
+                    <Icon as={FiPhone} /> <Text as='span'  className='mailNum'>(+00) 555 666 999 00</Text>
+                </Text>
+                <Link to='/contactUs'>
+                    <Button
+                        padding='1.5rem'
+                        fontWeight='bold'
+                        className={`header-btn ${buttonHoverClass}`}
+                    >
+                        BOOK NOW
+                    </Button>
+                </Link>
+            </Flex>
+        </Box>
     );
 }
